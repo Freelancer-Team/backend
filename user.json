@@ -1,0 +1,4 @@
+{"_id":{"$numberInt":"1"},"name":"xtc","password":"xtc","email":"xtc@qq.com","address":"闵行800号","phone":"13135842549","role":"1"}
+{"_id":{"$numberInt":"2"},"name":"gdy","password":"gdy","email":"gdy@qq.com","address":"闵行800号","phone":"13468687895","role":{"$numberInt":"0"},"_class":"freelancer.entity.User"}
+{"_id":{"$numberInt":"3"},"name":"sqy","password":"sqy","email":"sqy@qq.com","address":"闵行800号","phone":"15488684589","role":{"$numberInt":"0"},"_class":"freelancer.entity.User"}
+{"_id":{"$numberInt":"4"},"name":"lyb","password":"lyb","email":"lyb@qq.com","address":"闵行800号","phone":"15426589875","role":{"$numberInt":"0"},"_class":"freelancer.entity.User"}
