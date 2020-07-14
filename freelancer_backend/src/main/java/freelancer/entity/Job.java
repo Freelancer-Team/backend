@@ -9,7 +9,7 @@ public class Job {
 
     @Id
     private String id;
-    private String skills;
+    private String[] skills;
     private String price;
     private String description;
     private String remaining_time;
@@ -31,11 +31,11 @@ public class Job {
         return remaining_time;
     }
 
-    public void setSkills(String skills) {
+    public void setSkills(String[] skills) {
         this.skills = skills;
     }
 
-    public String getSkills() {
+    public String[] getSkills() {
         return skills;
     }
 
