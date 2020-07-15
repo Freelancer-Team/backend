@@ -14,6 +14,49 @@ public class Job {
     private String description;
     private String remaining_time;
     private String title;
+    private Integer peopleNumber;
+    private String employeeName;
+    private int employeeId;
+    private String employerName;
+    private int employerId;
+    private double employeeRate;
+    private double employerRate;
+    private String startTime;
+    private String finishTime;
+    private int avgPrice;
+    private int lowestPrice;
+
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public int getEmployerId() {
+        return employerId;
+    }
+
+    public String getEmployerName() {
+        return employerName;
+    }
+
+    public String getEmployeeName() {
+        return employeeName;
+    }
+
+    public void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
+    }
+
+    public void setEmployerId(int employerId) {
+        this.employerId = employerId;
+    }
+
+    public void setEmployerName(String employerName) {
+        this.employerName = employerName;
+    }
 
     public void setPrice(String price) {
         this.price = price;

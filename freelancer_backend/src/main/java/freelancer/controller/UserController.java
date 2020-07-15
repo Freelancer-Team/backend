@@ -1,5 +1,6 @@
 package freelancer.controller;
 
+import freelancer.entity.Skill;
 import freelancer.entity.User;
 import freelancer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,8 +23,8 @@ public class UserController {
     }
 
     @RequestMapping("/login")
-    public User login(@RequestParam("name") String name,@RequestParam("password") String password){
-        return userService.login(name, password);
+    public User login(@RequestParam("email") String email,@RequestParam("password") String password){
+        return userService.login(email, password);
     }
 
     @RequestMapping("/signup")
@@ -32,4 +33,10 @@ public class UserController {
                        @RequestParam("phone") String phone){
         return userService.signup(name,password,email,address,phone);
     }
+
+    @RequestMapping("/getUserSkills")
+    public List<String> getUserSkills(@RequestParam("id") Integer id){return userService.getUserSkills(id);}
+
+    @RequestMapping("/createData")
+    public void createData(){userService.createData();}
   }
