@@ -1,21 +1,60 @@
 package freelancer.entity;
 
+import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
+import java.util.List;
 
-
+@Data
 @Document(collection = "user")
 public class User {
 
     @Id
     private Integer id;
     private String name;
+    private int age;
+    private String gender;
     private String password;
     private String email;
     private String address;
     private String phone;
     private int role;
+    private String time;
+    private String description;
+    private List<String> skills;
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
 
     public int getId() {
         return id;
@@ -70,5 +109,13 @@ public class User {
 
     public int getRole() {
         return role;
+    }
+
+    public void setSkills(List<String> skills) {
+        this.skills = skills;
+    }
+
+    public List<String> getSkills() {
+        return skills;
     }
 }

@@ -16,4 +16,17 @@ public class JobController {
     public List<Job> getJobs() {
         return jobService.getJobs();
     }
+
+    @RequestMapping("/saveJob")
+    public Job saveJob(@RequestBody Job job) {
+        return jobService.saveJob(job);
+    }
+
+    @RequestMapping("/getJob")
+    public Job getJob(@RequestParam("id") String id) {
+        return jobService.getJob(id);
+    }
+
+    @RequestMapping("/createRelation")
+    public void createRelation(){jobService.createRelation();}
   }
