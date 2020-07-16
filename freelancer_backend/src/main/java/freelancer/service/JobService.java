@@ -10,4 +10,5 @@ public interface JobService {
     Job saveJob(Job job);
     Job getJob(String id);
     void createRelation();
+    Job assignJob(int userId,String userName,String jobId);
 }

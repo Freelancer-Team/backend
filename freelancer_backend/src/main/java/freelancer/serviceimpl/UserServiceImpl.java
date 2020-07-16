@@ -1,6 +1,5 @@
 package freelancer.serviceimpl;
 
-import freelancer.entity.Skill;
 import freelancer.entity.User;
 import freelancer.repository.SkillRepository;
 import freelancer.repository.UserRepository;
@@ -24,9 +23,22 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User getUser(int id){
+        if(userRepository.findById(id).isPresent())
+           return userRepository.findById(id).get();
+        else return null;
+    }
+
+    @Override
     public User login(String email, String password){
         User user = userRepository.login(email,password);
         return user;
+    }
+
+    @Override
+    public User saveUser(User user)
+    {
+        return userRepository.save(user);
     }
 
     @Override
