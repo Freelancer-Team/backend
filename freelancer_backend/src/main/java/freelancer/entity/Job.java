@@ -26,6 +26,22 @@ public class Job {
     private int avgPrice;
     private int lowestPrice;
 
+    public void setEmployeeRate(double employeeRate) {
+        this.employeeRate = employeeRate;
+    }
+
+    public double getEmployeeRate() {
+        return employeeRate;
+    }
+
+    public void setEmployerRate(double employerRate) {
+        this.employerRate = employerRate;
+    }
+
+    public double getEmployerRate() {
+        return employerRate;
+    }
+
     public void setEmployeeId(int employeeId) {
         this.employeeId = employeeId;
     }
