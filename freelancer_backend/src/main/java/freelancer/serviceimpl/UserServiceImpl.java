@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -99,13 +98,13 @@ public class UserServiceImpl implements UserService {
                 password+=(int) (Math.random()*9);
             j = 6+(int) (Math.random()*5);
             email = createRandom(j)+'@'+"163.com";
-            address = "闵行东川路800号";
+            address = "Dongchuan Road 800";
             phone = "1";
             for (int k=0;k<10;k++)
                 phone += (int) (Math.random()*9);
             role = 0;
             time = "2020/"+ (1+(int) (Math.random()* 6)) +'/'+(1+(int) (Math.random()* 30));
-            description = "暂无简介";
+            description = "Don't have a description";
             j = 2 + (int) (Math.random()* 6);
             for (int k=0;k<j;k++)
             {

@@ -24,6 +24,7 @@ public class User {
     private String description;
     private List<String> skills;
 
+
     public void setDescription(String description) {
         this.description = description;
     }
