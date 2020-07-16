@@ -23,7 +23,42 @@ public class User {
     private String time;
     private String description;
     private List<String> skills;
+    private double employeeRate;
+    private int employeeNum;
+    private double employerRate;
+    private int employerNum;
 
+    public void setEmployeeNum(int employeeNum) {
+        this.employeeNum = employeeNum;
+    }
+
+    public void setEmployerNum(int employerNum) {
+        this.employerNum = employerNum;
+    }
+
+    public int getEmployeeNum() {
+        return employeeNum;
+    }
+
+    public int getEmployerNum() {
+        return employerNum;
+    }
+
+    public void setEmployerRate(double employerRate) {
+        this.employerRate = employerRate;
+    }
+
+    public void setEmployeeRate(double employeeRate) {
+        this.employeeRate = employeeRate;
+    }
+
+    public double getEmployerRate() {
+        return employerRate;
+    }
+
+    public double getEmployeeRate() {
+        return employeeRate;
+    }
 
     public void setDescription(String description) {
         this.description = description;

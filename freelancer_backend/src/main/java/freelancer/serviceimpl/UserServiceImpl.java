@@ -1,12 +1,15 @@
 package freelancer.serviceimpl;
 
+import freelancer.entity.Job;
 import freelancer.entity.User;
 import freelancer.repository.SkillRepository;
 import freelancer.repository.UserRepository;
+import freelancer.repository.JobRepository;
 import freelancer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -66,6 +69,43 @@ public class UserServiceImpl implements UserService {
             a = userRepository.findById(id).get().getSkills();
         }
         return a;
+    }
+
+    @Autowired
+    JobRepository jobRepository;
+    @Override
+    public void createRate(){
+        List<Job> list;
+        list = jobRepository.findAll();
+        Job job;
+        User user;
+        double employeeRate;
+        double employerRate;
+        String obj1;
+        DecimalFormat df = new DecimalFormat("#.#");
+        for(int i=0;i<list.size();i++){
+            job = list.get(i);
+            if(job.getEmployeeRate()!=0)
+            {
+                user = userRepository.findById(job.getEmployeeId()).get();
+                employeeRate = (user.getEmployeeRate()*user.getEmployeeNum()+job.getEmployeeRate())/(user.getEmployeeNum()+1);
+                obj1 = df.format(employeeRate);
+                employeeRate = Double.parseDouble(obj1);
+                user.setEmployeeRate(employeeRate);
+                user.setEmployeeNum(user.getEmployeeNum()+1);
+                userRepository.save(user);
+            }
+            if(job.getEmployerRate()!=0)
+            {
+                user = userRepository.findById(job.getEmployerId()).get();
+                employerRate = (user.getEmployerRate()*user.getEmployerNum()+job.getEmployerRate())/(user.getEmployerNum()+1);
+                obj1 = df.format(employerRate);
+                employerRate = Double.parseDouble(obj1);
+                user.setEmployerRate(employerRate);
+                user.setEmployerNum(user.getEmployerNum()+1);
+                userRepository.save(user);
+            }
+        }
     }
 
     @Autowired
@@ -139,6 +179,10 @@ public class UserServiceImpl implements UserService {
             user.setTime(time);
             user.setDescription(description);
             user.setSkills(skills);
+            user.setEmployeeRate(0);
+            user.setEmployerRate(0);
+            user.setEmployeeNum(0);
+            user.setEmployerNum(0);
             userRepository.save(user);
         }
     }

@@ -14,5 +14,5 @@ public interface UserService {
     String createRandom(int i);
     User getUser(int id);
     User saveUser(User user);
-
+    void createRate();
 }
