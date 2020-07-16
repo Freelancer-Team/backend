@@ -52,4 +52,8 @@ public class UserController {
     //保存user信息
     @RequestMapping("/saveUser")
     public User saveUser(@RequestBody User user){return userService.saveUser(user);}
+
+    //生成用户评分
+    @RequestMapping("/createRate")
+    public void createRate(){ userService.createRate();}
   }
