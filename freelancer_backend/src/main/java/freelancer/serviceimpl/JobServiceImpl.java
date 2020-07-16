@@ -1,16 +1,15 @@
 package freelancer.serviceimpl;
 
 import freelancer.entity.Job;
-import freelancer.entity.User;
 import freelancer.repository.JobRepository;
 import freelancer.repository.UserRepository;
 import freelancer.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import java.text.SimpleDateFormat;
 import java.text.DecimalFormat;
 import java.util.List;
-
+import java.util.Date;
 
 @Service
 public class JobServiceImpl implements JobService {
@@ -22,6 +21,17 @@ public class JobServiceImpl implements JobService {
         List<Job> list;
         list = jobRepository.findAll();
         return list;
+    }
+
+    @Override
+    public Job assignJob(int userId,String userName,String jobId){
+        Job job = jobRepository.findById(jobId).get();
+        job.setEmployeeName(userName);
+        job.setEmployeeId(userId);
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        job.setStartTime(df.format(new Date()));
+        jobRepository.save(job);
+        return job;
     }
 
     @Override

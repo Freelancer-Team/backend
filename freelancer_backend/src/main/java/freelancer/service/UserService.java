@@ -12,4 +12,7 @@ public interface UserService {
     List<String> getUserSkills(Integer id);
     void createData();
     String createRandom(int i);
+    User getUser(int id);
+    User saveUser(User user);
+
 }

@@ -26,6 +26,22 @@ public class Job {
     private int avgPrice;
     private int lowestPrice;
 
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public void setFinishTime(String finishTime) {
+        this.finishTime = finishTime;
+    }
+
+    public String getFinishTime() {
+        return finishTime;
+    }
+
     public void setEmployeeRate(double employeeRate) {
         this.employeeRate = employeeRate;
     }

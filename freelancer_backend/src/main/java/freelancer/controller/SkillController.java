@@ -14,6 +14,8 @@ public class SkillController {
     @Autowired
     private SkillService skillService;
 
+
+    //获得所有技能
     @RequestMapping("/getSkills")
     public List<Skill> getSkills() {
         return skillService.getSkills();
