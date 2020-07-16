@@ -56,4 +56,9 @@ public class UserController {
     //生成用户评分
     @RequestMapping("/createRate")
     public void createRate(){ userService.createRate();}
+
+    @RequestMapping("/updateSkills")
+    public User updateSkills(@RequestBody List<String> skills,@RequestParam("userId") int userId){
+        return userService.updateSkills(skills,userId);
+    }
   }

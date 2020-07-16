@@ -26,6 +26,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public User updateSkills(List<String> skills,int userId){
+        User user = userRepository.findById(userId).get();
+        user.setSkills(skills);
+        return userRepository.save(user);
+    }
+
+    @Override
     public User getUser(int id){
         if(userRepository.findById(id).isPresent())
            return userRepository.findById(id).get();

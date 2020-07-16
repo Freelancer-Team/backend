@@ -15,4 +15,5 @@ public interface UserService {
     User getUser(int id);
     User saveUser(User user);
     void createRate();
+    User updateSkills(List<String> skills,int userId);
 }
