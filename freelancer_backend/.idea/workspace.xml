@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/AuctionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/entity/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/entity/Auction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/AuctionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freelancer/service/AuctionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freelancer/service/AuctionServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +126,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserServiceTest">
+  <component name="RunManager" selected="JUnit.AuctionServiceTest.applyJob">
     <configuration name="AuctionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
@@ -218,10 +222,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
         <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.FreelancerApplicationTest" />
         <item itemvalue="JUnit.AuctionServiceTest" />
-        <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
         <item itemvalue="JUnit.SkillServiceTest.getSkills" />
       </list>
     </recent_temporary>
@@ -316,7 +320,7 @@
       <workItem from="1594778234000" duration="20556000" />
       <workItem from="1594830213039" duration="803000" />
       <workItem from="1594866851331" duration="20034000" />
-      <workItem from="1594951712677" duration="6354000" />
+      <workItem from="1594951712677" duration="6731000" />
     </task>
     <servers />
   </component>
@@ -380,22 +384,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594358073479" />
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1594958124807">
+    <state width="1323" height="331" key="GridCell.Tab.0.bottom" timestamp="1594958551366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594958124807" />
-    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1594958124807">
+    <state width="1323" height="331" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
+    <state width="1323" height="331" key="GridCell.Tab.0.center" timestamp="1594958551366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594958124807" />
-    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1594958124806">
+    <state width="1323" height="331" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
+    <state width="1323" height="331" key="GridCell.Tab.0.left" timestamp="1594958551366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594958124806" />
-    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1594958124807">
+    <state width="1323" height="331" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
+    <state width="1323" height="331" key="GridCell.Tab.0.right" timestamp="1594958551366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594958124807" />
+    <state width="1323" height="331" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
     <state width="1323" height="191" key="GridCell.Tab.1.bottom" timestamp="1594954500481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

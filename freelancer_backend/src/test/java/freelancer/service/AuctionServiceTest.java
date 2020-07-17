@@ -13,7 +13,7 @@ class AuctionServiceTest {
 
     @Test
     public void applyJob() {
-        double price = 888.8;
-        assertEquals(price,auctionService.applyJob(5,"5f0c638cacd8b0e93f8facb2","I can",888.8).getPrice());
+        String price = "$888.8";
+        assertEquals(price,auctionService.applyJob(5,"5f0c638cacd8b0e93f8facb2","I can","$888.8").getPrice());
     }
 }
