@@ -6,5 +6,5 @@ import freelancer.entity.Auction;
 import java.util.List;
 
 public interface AuctionService {
-    Auction applyJob(int userId, String jobId, String description, double price);
+    Auction applyJob(int userId, String jobId, String description, String price);
 }

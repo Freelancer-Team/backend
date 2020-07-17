@@ -18,7 +18,7 @@ public class AuctionController {
     //申请工作
     @RequestMapping("/applyJob")
     public Auction assignJob(@RequestParam("userId") int userId,@RequestParam("jobId") String jobId,
-                             @RequestParam("description") String description, @RequestParam("price") double price)
+                             @RequestParam("description") String description, @RequestParam("price") String price)
     {
         return auctionService.applyJob(userId,jobId,description,price);
     }

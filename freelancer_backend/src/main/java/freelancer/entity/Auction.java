@@ -16,7 +16,7 @@ public class Auction {
     private String userName;
     private String description;
     private List<String> skills;
-    private double price;
+    private String price;
 
     public void setDescription(String description) {
         this.description = description;
@@ -30,7 +30,7 @@ public class Auction {
         this.id = id;
     }
 
-    public void setPrice(double price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -58,7 +58,7 @@ public class Auction {
         return id;
     }
 
-    public double getPrice() {
+    public String getPrice() {
         return price;
     }
 
