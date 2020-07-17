@@ -3,16 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/AuctionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/entity/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/entity/Auction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/AuctionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jobs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../jobs.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../skills.json" beforeDir="false" afterPath="$PROJECT_DIR$/../skills.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../user.json" beforeDir="false" afterPath="$PROJECT_DIR$/../user.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +39,9 @@
       </path>
     </expand>
     <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="freelancer_backend" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -115,9 +109,7 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="freelancer.service" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
+      <recent name="freelancer" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="freelancer.controller" />
@@ -126,9 +118,12 @@
       <recent name="freelancer.repository" />
       <recent name="freelancer.entity" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.FreelancerApplication">
-    <configuration name="SkillServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.UserServiceTest">
+    <configuration name="AuctionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
         <pattern>
@@ -137,13 +132,44 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
-      <option name="MAIN_CLASS_NAME" value="freelancer.service.SkillServiceTest" />
+      <option name="MAIN_CLASS_NAME" value="freelancer.service.AuctionServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillServiceTest.testGetSkills" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuctionServiceTest.applyJob" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="freelancer_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freelancer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freelancer.service" />
+      <option name="MAIN_CLASS_NAME" value="freelancer.service.AuctionServiceTest" />
+      <option name="METHOD_NAME" value="applyJob" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FreelancerApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="freelancer_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freelancer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freelancer" />
+      <option name="MAIN_CLASS_NAME" value="freelancer.FreelancerApplicationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SkillServiceTest.getSkills" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
         <pattern>
@@ -153,8 +179,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
       <option name="MAIN_CLASS_NAME" value="freelancer.service.SkillServiceTest" />
-      <option name="METHOD_NAME" value="testGetSkills" />
+      <option name="METHOD_NAME" value="getSkills" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="freelancer_backend" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freelancer.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freelancer.service" />
+      <option name="MAIN_CLASS_NAME" value="freelancer.service.UserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -168,14 +209,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.SkillServiceTest" />
-      <item itemvalue="JUnit.SkillServiceTest.testGetSkills" />
       <item itemvalue="Spring Boot.FreelancerApplication" />
+      <item itemvalue="JUnit.SkillServiceTest.getSkills" />
+      <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
+      <item itemvalue="JUnit.AuctionServiceTest" />
+      <item itemvalue="JUnit.FreelancerApplicationTest" />
+      <item itemvalue="JUnit.UserServiceTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.SkillServiceTest" />
-        <item itemvalue="JUnit.SkillServiceTest.testGetSkills" />
+        <item itemvalue="JUnit.UserServiceTest" />
+        <item itemvalue="JUnit.FreelancerApplicationTest" />
+        <item itemvalue="JUnit.AuctionServiceTest" />
+        <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
+        <item itemvalue="JUnit.SkillServiceTest.getSkills" />
       </list>
     </recent_temporary>
   </component>
@@ -268,7 +315,8 @@
       <workItem from="1594692036888" duration="18345000" />
       <workItem from="1594778234000" duration="20556000" />
       <workItem from="1594830213039" duration="803000" />
-      <workItem from="1594866851331" duration="18494000" />
+      <workItem from="1594866851331" duration="20034000" />
+      <workItem from="1594951712677" duration="6354000" />
     </task>
     <servers />
   </component>
@@ -288,14 +336,14 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="22" key="#Project_Structure/0.0.1366.728@0.0.1366.728" timestamp="1594717032748" />
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594890062804">
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1594956922022">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594890062804" />
-    <state x="286" y="25" width="960" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594778703053">
+    <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1594956922022" />
+    <state x="44" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1594954850288">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="286" y="25" width="960" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594778703053" />
+    <state x="44" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1594954850288" />
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1594826565098">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -312,10 +360,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="401" y="289" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1366.728@0.0.1366.728" timestamp="1588308792283" />
-    <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594801489152">
+    <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594953813834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1594801489152" />
+    <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1594953813834" />
     <state x="523" y="234" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.packages" timestamp="1594362653380">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -332,46 +380,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594358073479" />
-    <state width="1323" height="287" key="GridCell.Tab.0.bottom" timestamp="1594896360283">
+    <state width="1323" height="187" key="GridCell.Tab.0.bottom" timestamp="1594958124807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594896360283" />
-    <state width="1323" height="287" key="GridCell.Tab.0.center" timestamp="1594896360283">
+    <state width="1323" height="187" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594958124807" />
+    <state width="1323" height="187" key="GridCell.Tab.0.center" timestamp="1594958124807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594896360283" />
-    <state width="1323" height="287" key="GridCell.Tab.0.left" timestamp="1594896360283">
+    <state width="1323" height="187" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594958124807" />
+    <state width="1323" height="187" key="GridCell.Tab.0.left" timestamp="1594958124806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594896360283" />
-    <state width="1323" height="287" key="GridCell.Tab.0.right" timestamp="1594896360283">
+    <state width="1323" height="187" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594958124806" />
+    <state width="1323" height="187" key="GridCell.Tab.0.right" timestamp="1594958124807">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594896360283" />
-    <state width="1323" height="287" key="GridCell.Tab.1.bottom" timestamp="1594896360284">
+    <state width="1323" height="187" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594958124807" />
+    <state width="1323" height="191" key="GridCell.Tab.1.bottom" timestamp="1594954500481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594896360284" />
-    <state width="1323" height="287" key="GridCell.Tab.1.center" timestamp="1594896360284">
+    <state width="1323" height="191" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
+    <state width="1323" height="191" key="GridCell.Tab.1.center" timestamp="1594954500481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1594896360284" />
-    <state width="1323" height="287" key="GridCell.Tab.1.left" timestamp="1594896360284">
+    <state width="1323" height="191" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
+    <state width="1323" height="191" key="GridCell.Tab.1.left" timestamp="1594954500481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1594896360284" />
-    <state width="1323" height="287" key="GridCell.Tab.1.right" timestamp="1594896360284">
+    <state width="1323" height="191" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
+    <state width="1323" height="191" key="GridCell.Tab.1.right" timestamp="1594954500481">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="287" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1594896360284" />
+    <state width="1323" height="191" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
     <state width="283" height="477" key="HiddenNamespacesPopup" timestamp="1588404920185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="283" height="477" key="HiddenNamespacesPopup/0.0.1366.728@0.0.1366.728" timestamp="1588404920185" />
-    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1594725118796">
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1594952709616">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1594725118796" />
+    <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1594952709616" />
     <state x="162" y="0" key="SettingsEditor" timestamp="1588322368863">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -384,21 +432,21 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="744" y="191" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.728@0.0.1366.728" timestamp="1587831119804" />
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1594866851409">
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1594952408455">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1594866851409" />
-    <state x="454" y="82" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594717141635">
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1594952408455" />
+    <state x="579" y="60" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594957490701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="454" y="82" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1594717141634" />
+    <state x="579" y="60" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1366.728@0.0.1366.728" timestamp="1594957490701" />
     <state x="106" y="98" key="new project wizard" timestamp="1594358608973">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="106" y="98" key="new project wizard/0.0.1366.728@0.0.1366.728" timestamp="1594358608973" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594887807474">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1594958025413">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594887807474" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1594958025413" />
   </component>
 </project>
