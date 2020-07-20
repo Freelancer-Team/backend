@@ -4,10 +4,10 @@
     <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/AuctionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/entity/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/entity/Auction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/repository/AuctionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/repository/AuctionRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/AuctionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/freelancer/service/AuctionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freelancer/service/AuctionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freelancer/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freelancer/service/UserServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +126,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AuctionServiceTest.applyJob">
+  <component name="RunManager" selected="Spring Boot.FreelancerApplication">
     <configuration name="AuctionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
@@ -158,22 +158,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FreelancerApplicationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JobServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="freelancer.*" />
+          <option name="PATTERN" value="freelancer.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="freelancer" />
-      <option name="MAIN_CLASS_NAME" value="freelancer.FreelancerApplicationTest" />
+      <option name="PACKAGE_NAME" value="freelancer.service" />
+      <option name="MAIN_CLASS_NAME" value="freelancer.service.JobServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SkillServiceTest.getSkills" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SkillServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
         <pattern>
@@ -183,8 +183,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
       <option name="MAIN_CLASS_NAME" value="freelancer.service.SkillServiceTest" />
-      <option name="METHOD_NAME" value="getSkills" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -213,20 +212,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.FreelancerApplication" />
-      <item itemvalue="JUnit.SkillServiceTest.getSkills" />
       <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
       <item itemvalue="JUnit.AuctionServiceTest" />
-      <item itemvalue="JUnit.FreelancerApplicationTest" />
       <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.JobServiceTest" />
+      <item itemvalue="JUnit.SkillServiceTest" />
+      <item itemvalue="Spring Boot.FreelancerApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
         <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.FreelancerApplicationTest" />
+        <item itemvalue="JUnit.SkillServiceTest" />
+        <item itemvalue="JUnit.JobServiceTest" />
         <item itemvalue="JUnit.AuctionServiceTest" />
-        <item itemvalue="JUnit.SkillServiceTest.getSkills" />
+        <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +319,8 @@
       <workItem from="1594778234000" duration="20556000" />
       <workItem from="1594830213039" duration="803000" />
       <workItem from="1594866851331" duration="20034000" />
-      <workItem from="1594951712677" duration="6731000" />
+      <workItem from="1594951712677" duration="10869000" />
+      <workItem from="1595212288347" duration="243000" />
     </task>
     <servers />
   </component>
@@ -384,38 +384,38 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594358073479" />
-    <state width="1323" height="331" key="GridCell.Tab.0.bottom" timestamp="1594958551366">
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom" timestamp="1595212663850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="331" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
-    <state width="1323" height="331" key="GridCell.Tab.0.center" timestamp="1594958551366">
+    <state width="1323" height="209" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595212663850" />
+    <state width="1323" height="209" key="GridCell.Tab.0.center" timestamp="1595212663849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="331" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
-    <state width="1323" height="331" key="GridCell.Tab.0.left" timestamp="1594958551366">
+    <state width="1323" height="209" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1595212663849" />
+    <state width="1323" height="209" key="GridCell.Tab.0.left" timestamp="1595212663849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="331" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
-    <state width="1323" height="331" key="GridCell.Tab.0.right" timestamp="1594958551366">
+    <state width="1323" height="209" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1595212663849" />
+    <state width="1323" height="209" key="GridCell.Tab.0.right" timestamp="1595212663849">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="331" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1594958551366" />
-    <state width="1323" height="191" key="GridCell.Tab.1.bottom" timestamp="1594954500481">
+    <state width="1323" height="209" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1595212663849" />
+    <state width="1323" height="209" key="GridCell.Tab.1.bottom" timestamp="1595212663850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
-    <state width="1323" height="191" key="GridCell.Tab.1.center" timestamp="1594954500481">
+    <state width="1323" height="209" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1595212663850" />
+    <state width="1323" height="209" key="GridCell.Tab.1.center" timestamp="1595212663850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
-    <state width="1323" height="191" key="GridCell.Tab.1.left" timestamp="1594954500481">
+    <state width="1323" height="209" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1595212663850" />
+    <state width="1323" height="209" key="GridCell.Tab.1.left" timestamp="1595212663850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
-    <state width="1323" height="191" key="GridCell.Tab.1.right" timestamp="1594954500481">
+    <state width="1323" height="209" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1595212663850" />
+    <state width="1323" height="209" key="GridCell.Tab.1.right" timestamp="1595212663850">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="191" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1594954500481" />
+    <state width="1323" height="209" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1595212663850" />
     <state width="283" height="477" key="HiddenNamespacesPopup" timestamp="1588404920185">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -436,10 +436,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="744" y="191" key="com.intellij.database.view.ui.DbObjectDialog/0.0.1366.728@0.0.1366.728" timestamp="1587831119804" />
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1594952408455">
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1595212288398">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1594952408455" />
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1595212288398" />
     <state x="579" y="60" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594957490701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -22,4 +22,6 @@ public class AuctionController {
     {
         return auctionService.applyJob(userId,jobId,description,price);
     }
+    @RequestMapping("/getAuction")
+    public List<Auction> getAuction(@RequestParam("jobId") String jobId){return auctionService.getAuction(jobId);}
 }
