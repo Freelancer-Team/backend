@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface AuctionService {
     Auction applyJob(int userId, String jobId, String description, String price);
+    List<Auction> getAuction(String jobId);
 }

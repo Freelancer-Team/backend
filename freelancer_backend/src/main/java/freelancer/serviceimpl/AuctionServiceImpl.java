@@ -10,6 +10,7 @@ import freelancer.service.AuctionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 
 
 @Service
@@ -37,5 +38,10 @@ public class AuctionServiceImpl implements AuctionService {
         auction.setPrice(price);
         auction.setSkills(user.getSkills());
         return auctionRepository.save(auction);
+    }
+
+    @Override
+    public List<Auction> getAuction(String jobId){
+        return auctionRepository.getAuction(jobId);
     }
 }
