@@ -15,7 +15,8 @@ public class JobController {
     private JobService jobService;
 
     //获得所有job
-    @PassToken
+//    @PassToken
+    @UserLoginToken
     @RequestMapping("/getJobs")
     public List<Job> getJobs() {
         return jobService.getJobs();
