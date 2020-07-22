@@ -8,11 +8,12 @@ import freelancer.entity.User;
 import freelancer.service.UserService;
 import org.apache.catalina.Manager;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.method.HandlerMethod;
+//import org.springframework.web.method.HandlerMethod;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.lang.reflect.Method;
 import com.auth0.jwt.JWT;
+import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -22,11 +23,12 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object object) throws Exception {
-        String token = httpServletRequest.getHeader("token");// 从 http 请求头中取出 token
+//        String token = httpServletRequest.getHeader("token");// 从 http 请求头中取出 token
+        String token = httpServletRequest.getHeader("Authorization");
         // 如果不是映射到方法直接通过
-//        if (!(object instanceof HandlerMethod)) {
-//            return true;
-//        }
+        if (!(object instanceof HandlerMethod)) {
+            return true;
+        }
         HandlerMethod handlerMethod = (HandlerMethod) object;
         Method method = handlerMethod.getMethod();
         //检查是否有passtoken注释，有则跳过认证
@@ -67,6 +69,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
         if (token == null) {
             throw new RuntimeException("无token，请重新登录");
         }
+        token = token.replace("Bearer ", "");
         // 获取 token 中的 user id
         String email;
         try {
