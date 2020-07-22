@@ -1,5 +1,7 @@
 package freelancer.controller;
 import freelancer.entity.Job;
+import freelancer.security.PassToken;
+import freelancer.security.UserLoginToken;
 import freelancer.service.JobService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -13,35 +15,35 @@ public class JobController {
     private JobService jobService;
 
     //获得所有job
+    @PassToken
     @RequestMapping("/getJobs")
     public List<Job> getJobs() {
         return jobService.getJobs();
     }
 
-
     //保存job
+    @UserLoginToken
     @RequestMapping("/saveJob")
     public Job saveJob(@RequestBody Job job) {
         return jobService.saveJob(job);
     }
 
-
     //使用id获得job
+    @PassToken
     @RequestMapping("/getJob")
     public Job getJob(@RequestParam("id") String id) {
         return jobService.getJob(id);
     }
 
-
     //生成数据使用
     @RequestMapping("/createRelation")
     public void createRelation(){jobService.createRelation();}
 
-
     //雇主指定雇员接受任务
+    @UserLoginToken
     @RequestMapping("/assignJob")
     public Job assignJob(@RequestParam("userId") int userId, @RequestParam("userName") String userName,@RequestParam("jobId") String jobId)
     {
         return jobService.assignJob(userId,userName,jobId);
     }
-  }
+}
