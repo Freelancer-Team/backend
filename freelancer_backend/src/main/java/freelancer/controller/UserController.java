@@ -1,13 +1,13 @@
 package freelancer.controller;
 
-import freelancer.entity.Skill;
 import freelancer.entity.User;
+import freelancer.security.ManagerLoginToken;
+import freelancer.security.PassToken;
+import freelancer.security.UserLoginToken;
 import freelancer.service.UserService;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -17,19 +17,38 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     //管理员获得所有用户
-    @RequestMapping("/getUsers")
+    @ManagerLoginToken
+    @GetMapping("/getUsers")
     public List<User> getUsers() {
         return userService.getUsers();
     }
 
     //登录
+    @PassToken
     @RequestMapping("/login")
-    public User login(@RequestParam("email") String email,@RequestParam("password") String password){
-        return userService.login(email, password);
+    public Object login(@RequestParam("email") String email,@RequestParam("password") String password){
+        JSONObject jsonObject=new JSONObject();
+        User userForBase=userService.findUserByemail(email);
+        if(userForBase==null){
+            jsonObject.put("message","登录失败,用户不存在");
+            return jsonObject;
+        }else {
+            if (!userForBase.getPassword().equals(password)){
+                jsonObject.put("message","登录失败,密码错误");
+            }
+            else {
+                String token = userService.getToken(userForBase);
+                jsonObject.put("token", token);
+                jsonObject.put("user", userForBase);
+            }
+            return jsonObject;
+        }
     }
 
     //注册
+    @PassToken
     @RequestMapping("/signup")
     public User signup(@RequestParam("name") String name,@RequestParam("password") String password,
                        @RequestParam("email") String email,@RequestParam("address") String address,
@@ -38,6 +57,7 @@ public class UserController {
     }
 
     //通过id获得用户技能
+    @UserLoginToken
     @RequestMapping("/getUserSkills")
     public List<String> getUserSkills(@RequestParam("id") Integer id){return userService.getUserSkills(id);}
 
@@ -46,10 +66,12 @@ public class UserController {
     public void createData(){userService.createData();}
 
     //通过id获得user
+    @UserLoginToken
     @RequestMapping("/getUser")
     public User getUser(@RequestParam("id") int id){return userService.getUser(id);}
 
     //保存user信息
+    @UserLoginToken
     @RequestMapping("/saveUser")
     public User saveUser(@RequestBody User user){return userService.saveUser(user);}
 
@@ -57,6 +79,7 @@ public class UserController {
     @RequestMapping("/createRate")
     public void createRate(){ userService.createRate();}
 
+    @UserLoginToken
     @RequestMapping("/updateSkills")
     public User updateSkills(@RequestBody List<String> skills,@RequestParam("userId") int userId){
         return userService.updateSkills(skills,userId);

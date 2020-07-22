@@ -1,7 +1,7 @@
 package freelancer.controller;
 
 import freelancer.entity.Auction;
-import freelancer.entity.Job;
+import freelancer.security.UserLoginToken;
 import freelancer.service.AuctionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -16,12 +16,16 @@ public class AuctionController {
     @Autowired
     AuctionService auctionService;
     //申请工作
+
+    @UserLoginToken
     @RequestMapping("/applyJob")
     public Auction assignJob(@RequestParam("userId") int userId,@RequestParam("jobId") String jobId,
                              @RequestParam("description") String description, @RequestParam("price") String price)
     {
         return auctionService.applyJob(userId,jobId,description,price);
     }
+
+    @UserLoginToken
     @RequestMapping("/getAuction")
     public List<Auction> getAuction(@RequestParam("jobId") String jobId){return auctionService.getAuction(jobId);}
 }

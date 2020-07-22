@@ -16,4 +16,6 @@ public interface UserService {
     User saveUser(User user);
     void createRate();
     User updateSkills(List<String> skills,int userId);
+    String getToken(User user);
+    User findUserByemail(String email);
 }

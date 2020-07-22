@@ -10,4 +10,6 @@ public interface UserRepository extends MongoRepository<User, Integer> {
     User login(String email, String password);
     @Query(value="{'$and': [{ 'name':?0}]}")
     User findname(String name);
+    @Query(value="{'$and': [{ 'email':?0}]}")
+    User findUserByemail(String email);
 }
