@@ -4,17 +4,26 @@ import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.List;
+
 @Document(collection = "jobs")
 public class Job {
 
     @Id
     private String id;
-    private String[] skills;
+    private List<String> skills;
     private String price;
+    private int low;
+    private int high;
+    private int type;
     private String description;
     private String remaining_time;
     private String title;
-    private Integer peopleNumber;
+    private int state;
+    private String publishTime;
+    private String deadline;
+    private int click;
+    private int candidateNum;
     private String employeeName;
     private int employeeId;
     private String employerName;
@@ -25,6 +34,86 @@ public class Job {
     private String finishTime;
     private int avgPrice;
     private int lowestPrice;
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public int getType() {
+        return type;
+    }
+
+    public void setLow(int low) {
+        this.low = low;
+    }
+
+    public void setHigh(int high) {
+        this.high = high;
+    }
+
+    public int getHigh() {
+        return high;
+    }
+
+    public int getLow() {
+        return low;
+    }
+
+    public void setCandidateNum(int candidateNum) {
+        this.candidateNum = candidateNum;
+    }
+
+    public int getCandidateNum() {
+        return candidateNum;
+    }
+
+    public void setPublishTime(String publishTime) {
+        this.publishTime = publishTime;
+    }
+
+    public String getPublishTime() {
+        return publishTime;
+    }
+
+    public void setClick(int click) {
+        this.click = click;
+    }
+
+    public int getClick() {
+        return click;
+    }
+
+    public String getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(String deadline) {
+        this.deadline = deadline;
+    }
+
+    public void setState(int state) {
+        this.state = state;
+    }
+
+    public int getState() {
+        return state;
+    }
+
+    public int getAvgPrice() {
+        return avgPrice;
+    }
+
+    public int getLowestPrice() {
+        return lowestPrice;
+    }
+
+    public void setAvgPrice(int avgPrice) {
+        this.avgPrice = avgPrice;
+    }
+
+    public void setLowestPrice(int lowestPrice) {
+        this.lowestPrice = lowestPrice;
+    }
 
     public void setStartTime(String startTime) {
         this.startTime = startTime;
@@ -106,11 +195,11 @@ public class Job {
         return remaining_time;
     }
 
-    public void setSkills(String[] skills) {
+    public void setSkills(List<String> skills) {
         this.skills = skills;
     }
 
-    public String[] getSkills() {
+    public List<String> getSkills() {
         return skills;
     }
 
