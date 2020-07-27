@@ -27,8 +27,10 @@ public class UserController {
 
     //登录
     @PassToken
-    @RequestMapping("/login")
+    @PostMapping("/login")
     public Object login(@RequestParam("email") String email,@RequestParam("password") String password){
+        System.out.println(email);
+        System.out.println(password);
         JSONObject jsonObject=new JSONObject();
         User userForBase=userService.findUserByemail(email);
         if(userForBase==null){
@@ -84,4 +86,13 @@ public class UserController {
     public User updateSkills(@RequestBody List<String> skills,@RequestParam("userId") int userId){
         return userService.updateSkills(skills,userId);
     }
+
+    @ManagerLoginToken
+    @RequestMapping("setUserRole")
+    public void setUserRole(@RequestParam("userId") int userId,@RequestParam("role") int role){
+        userService.setUserRole(userId,role);
+    }
+
+    @RequestMapping("/updateNum")
+    public void updateNum(){userService.updateNum();}
   }

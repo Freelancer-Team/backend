@@ -99,6 +99,39 @@ public class UserServiceImpl implements UserService {
 
     @Autowired
     JobRepository jobRepository;
+
+    @Override
+    public void updateNum(){
+        List<User> users = userRepository.findAll();
+        List<Job> jobs = jobRepository.findAll();
+        int s= jobs.size();
+        User user;
+        for(int i=0;i<users.size();i++)
+        {
+            user = users.get(i);
+            int id = user.getId();
+            int work = 0;
+            int publish = 0;
+            for (int j=0;j<s;j++)
+            {
+                if(jobs.get(j).getEmployeeId() == id)
+                    work++;
+                if(jobs.get(j).getEmployerId() == id)
+                    publish++;
+            }
+            user.setWorkNumber(work);
+            user.setPublishNumber(publish);
+            userRepository.save(user);
+        }
+    }
+
+    @Override
+    public void setUserRole(int userId,int role){
+        User user = userRepository.findById(userId).get();
+        user.setRole(role);
+        userRepository.save(user);
+    }
+
     @Override
     public void createRate(){
         List<Job> list;

@@ -18,4 +18,6 @@ public interface UserService {
     User updateSkills(List<String> skills,int userId);
     String getToken(User user);
     User findUserByemail(String email);
+    void updateNum();
+    void setUserRole(int userId,int role);
 }

@@ -19,6 +19,8 @@ public class User {
     private String address;
     private String phone;
     private int role;
+    private int workNumber;
+    private int publishNumber;
     private String time;
     private String description;
     private List<String> skills;
@@ -26,6 +28,22 @@ public class User {
     private int employeeNum;
     private double employerRate;
     private int employerNum;
+
+    public int getPublishNumber() {
+        return publishNumber;
+    }
+
+    public void setPublishNumber(int publishNumber) {
+        this.publishNumber = publishNumber;
+    }
+
+    public int getWorkNumber() {
+        return workNumber;
+    }
+
+    public void setWorkNumber(int workNumber) {
+        this.workNumber = workNumber;
+    }
 
     public void setEmployeeNum(int employeeNum) {
         this.employeeNum = employeeNum;
