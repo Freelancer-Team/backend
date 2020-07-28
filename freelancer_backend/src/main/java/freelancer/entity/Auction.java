@@ -16,7 +16,16 @@ public class Auction {
     private String userName;
     private String description;
     private List<String> skills;
-    private String price;
+    private int price;
+    private int type;
+
+    public void setType(int type) {
+        this.type = type;
+    }
+
+    public int getType() {
+        return type;
+    }
 
     public void setDescription(String description) {
         this.description = description;
@@ -30,7 +39,7 @@ public class Auction {
         this.id = id;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -58,7 +67,7 @@ public class Auction {
         return id;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
