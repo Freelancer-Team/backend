@@ -26,7 +26,7 @@ public class AuctionServiceImpl implements AuctionService {
     JobRepository jobRepository;
 
     @Override
-    public Auction applyJob(int userId, String jobId, String description, String price){
+    public Auction applyJob(int userId, String jobId, String description, int price){
         User user = userRepository.findById(userId).get();
         Job job = jobRepository.findById(jobId).get();
         Auction auction = new Auction();
@@ -37,6 +37,7 @@ public class AuctionServiceImpl implements AuctionService {
         auction.setDescription(description);
         auction.setPrice(price);
         auction.setSkills(user.getSkills());
+        auction.setType(job.getType());
         return auctionRepository.save(auction);
     }
 

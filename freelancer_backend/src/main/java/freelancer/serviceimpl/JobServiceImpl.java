@@ -210,8 +210,7 @@ public class JobServiceImpl implements JobService {
                 String description = "My ID is: "+userId+" ,trust I can do it!";
                 int tmp;
                 tmp = (int)((job.getHigh()-job.getLow())*Math.random()) + job.getLow();
-                String price = "$"+tmp;
-                auctionService.applyJob(userId, jobId, description, price);
+                auctionService.applyJob(userId, jobId, description, tmp);
             }
         }
     }
