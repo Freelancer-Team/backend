@@ -8,10 +8,9 @@
         <version>2.2.0.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.reins</groupId>
-    <artifactId>bookstore</artifactId>
+    <artifactId>freelancer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>bookstore</name>
+    <name>freelancer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -27,11 +26,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>2.2.5.RELEASE</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-mongodb -->
         <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->

@@ -1,6 +1,5 @@
 package freelancer.controller;
 import freelancer.entity.Job;
-import freelancer.entity.User;
 import freelancer.security.ManagerLoginToken;
 import freelancer.security.PassToken;
 import freelancer.security.UserLoginToken;
