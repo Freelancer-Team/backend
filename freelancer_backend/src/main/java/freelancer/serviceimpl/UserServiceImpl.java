@@ -26,6 +26,24 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    public void addShow(){
+        List<User> list = userRepository.findAll();
+        for(int i=0;i<list.size();i++)
+        {
+            User user  = list.get(i);
+            user.setIsShow(1);
+            userRepository.save(user);
+        }
+    }
+
+    @Override
+    public void setShow(int userId){
+        User user = userRepository.findById(userId).get();
+        user.setIsShow(user.getIsShow()==1?0:1);
+        userRepository.save(user);
+    }
+
+    @Override
     public String getToken(User user) {
         String token="";
         token= JWT.create().withAudience(user.getEmail())

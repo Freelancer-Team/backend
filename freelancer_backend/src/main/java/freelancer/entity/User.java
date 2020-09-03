@@ -1,11 +1,9 @@
 package freelancer.entity;
 
-import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.List;
 
-@Data
 @Document(collection = "user")
 public class User {
 
@@ -28,6 +26,15 @@ public class User {
     private int employeeNum;
     private double employerRate;
     private int employerNum;
+    private int isShow;
+
+    public int getIsShow() {
+        return isShow;
+    }
+
+    public void setIsShow(int isShow) {
+        this.isShow = isShow;
+    }
 
     public int getPublishNumber() {
         return publishNumber;
