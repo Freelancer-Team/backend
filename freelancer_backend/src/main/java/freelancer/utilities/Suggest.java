@@ -29,23 +29,38 @@ class JScore implements Comparable<JScore> {
 public class Suggest {
     @Autowired
     private JobRepository jobRepository;
+    @Autowired
     private UserRepository userRepository;
+    @Autowired
     private JobService jobService;
 
     List<JScore> scores;
 
     //各参数
-    double skillWeight = 0.6;
-    double rateWeight = 0.1;
-    double peerWeight = 0.3;
+    double skillWeight = 0.6;//技能点覆盖率的权重
+    double rateWeight = 0.1;//雇主整体评分的权重
+    double peerWeight = 0.3;//同行评分的权重
+    double blackRate=2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
 
-    List<Job> getSuggest(int userId) {
+    List<Job> normalSuggest(){
+        List<Job> jobs = jobService.getCurrentJobs();
+        List<Job> jobs1 = new ArrayList<>();
+        for(int i=0;i<8;i++)
+            jobs1.add(jobs.get(i));
+        return jobs1;
+    }
+
+    public List<Job> getSuggest(int userId) {
         List<Job> jobs = jobService.getCurrentJobs();
         User user = userRepository.findById(userId).get();
 
         List<String> skills = user.getSkills();
-        List<User> peers = getPeers(skills);
+        if(skills.size()<=0||userId==0)
+            return normalSuggest();//未登录或无相关资料的随机推荐job
+        List<User> peers = getPeers(skills,userId);//拥有相同技能的人
         List<Integer> blackList = getBlackList(userId);
+
+
 
         //获得scores
         jobs.forEach(job -> {
@@ -94,10 +109,16 @@ public class Suggest {
 
     }
 
-    List<User> getPeers(List<String> skills) {
+    List<User> getPeers(List<String> skills,int me) {
         List<User> peers = new ArrayList<>();
-
-        return null;
+        List<User> all=userRepository.findAll();
+        all.forEach(user -> {
+            List<String> cur=user.getSkills();
+            if(user.getId()!=me&&(cur==skills||skills.containsAll(cur))){
+                peers.add(user);
+            }
+        });
+        return peers;
     }
 
     void markByEmployer(List<User> peers) {
@@ -108,7 +129,7 @@ public class Suggest {
         List<Job> mine = jobRepository.findAsEmployee(userId);
         List<Integer> black = new ArrayList<>();
         mine.forEach(job -> {
-            if (job.getEmployeeRate() <= 2) black.add(job.getEmployerId());
+            if (job.getEmployeeRate() <= blackRate) black.add(job.getEmployerId());
         });
         return black;
     }

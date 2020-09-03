@@ -7,6 +7,7 @@ import freelancer.repository.JobRepository;
 import freelancer.repository.UserRepository;
 import freelancer.service.AuctionService;
 import freelancer.service.JobService;
+import freelancer.utilities.Suggest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,7 @@ import java.util.Date;
 public class JobServiceImpl implements JobService {
     @Autowired
     private JobRepository jobRepository;
+    private Suggest suggest;
 
     @Override
     public List<Job> getJobs() {
@@ -79,11 +81,12 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public List<Job> getSuggestJobs(int userId){
-        List<Job> jobs = jobRepository.findAll();
-        List<Job> jobs1 = new ArrayList<>();
-        for(int i=0;i<8;i++)
-          jobs1.add(jobs.get(i));
-        return jobs1;
+//        List<Job> jobs = jobRepository.findAll();
+//        List<Job> jobs1 = new ArrayList<>();
+//        for(int i=0;i<8;i++)
+//          jobs1.add(jobs.get(i));
+//        return jobs1;
+        return  suggest.getSuggest(userId);
     }
 
     @Override
