@@ -13,7 +13,7 @@ import java.util.Collections;
 import java.util.List;
 
 class JScore implements Comparable<JScore> {
-    String jobId;
+    Job job;
     double score = 0;
 
     @Override
@@ -40,12 +40,12 @@ public class Suggest {
     double skillWeight = 0.6;//技能点覆盖率的权重
     double rateWeight = 0.1;//雇主整体评分的权重
     double peerWeight = 0.3;//同行评分的权重
-    double blackRate=2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
+    double blackRate = 2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
 
-    List<Job> normalSuggest(){
+    List<Job> normalSuggest() {
         List<Job> jobs = jobService.getCurrentJobs();
         List<Job> jobs1 = new ArrayList<>();
-        for(int i=0;i<8;i++)
+        for (int i = 0; i < 8; i++)
             jobs1.add(jobs.get(i));
         return jobs1;
     }
@@ -55,19 +55,17 @@ public class Suggest {
         User user = userRepository.findById(userId).get();
 
         List<String> skills = user.getSkills();
-        if(skills.size()<=0||userId==0)
+        if (skills.size() <= 0 || userId == 0)
             return normalSuggest();//未登录或无相关资料的随机推荐job
-        List<User> peers = getPeers(skills,userId);//拥有相同技能的人
+        List<User> peers = getPeers(skills, userId);//拥有相同技能的人
         List<Integer> blackList = getBlackList(userId);
-
-
 
         //获得scores
         jobs.forEach(job -> {
             if (!blackList.contains(job.getEmployerId())) {
                 JScore item = new JScore();
-                item.jobId = job.getId();
-                item.score=0;
+                item.job = job;
+                item.score = 0;
                 scores.add(item);
                 markBySkill(skills);
                 markByEmployer(peers);
@@ -98,23 +96,29 @@ public class Suggest {
         List<Job> suggestJob = new ArrayList<>();
         Collections.sort(scores);
         for (int i = 0; i < 8; i++) {
-            Job j = jobRepository.findById(scores.get(i).jobId).get();
-            suggestJob.add(j);
+//            Job j = jobRepository.findById(scores.get(i).jobId).get();
+            suggestJob.add(scores.get(i).job);
         }
 
         return suggestJob;
     }
 
     void markBySkill(List<String> skills) {
-
+        scores.forEach(item -> {
+            List<String> cur = item.job.getSkills();
+            double allNum=cur.size();
+            cur.retainAll(skills);//cur取交集
+            double coverNum=cur.size();
+            item.score+=((coverNum/allNum)*100*skillWeight);
+        });
     }
 
-    List<User> getPeers(List<String> skills,int me) {
+    List<User> getPeers(List<String> skills, int me) {
         List<User> peers = new ArrayList<>();
-        List<User> all=userRepository.findAll();
+        List<User> all = userRepository.findAll();
         all.forEach(user -> {
-            List<String> cur=user.getSkills();
-            if(user.getId()!=me&&(cur==skills||skills.containsAll(cur))){
+            List<String> cur = user.getSkills();
+            if (user.getId() != me && (cur == skills || skills.containsAll(cur))) {
                 peers.add(user);
             }
         });
