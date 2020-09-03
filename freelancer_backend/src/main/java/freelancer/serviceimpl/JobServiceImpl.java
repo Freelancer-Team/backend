@@ -78,7 +78,7 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-    public List<Job> getSuggestJobs(){
+    public List<Job> getSuggestJobs(int userId){
         List<Job> jobs = jobRepository.findAll();
         List<Job> jobs1 = new ArrayList<>();
         for(int i=0;i<8;i++)
