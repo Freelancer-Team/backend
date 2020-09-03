@@ -41,6 +41,7 @@ public class Suggest {
     double rateWeight = 0.1;//雇主整体评分的权重
     double peerWeight = 0.3;//同行评分的权重
     double blackRate = 2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
+    int fullRate=5;//评分的满分
 
     List<Job> normalSuggest() {
         List<Job> jobs = jobService.getCurrentJobs();
@@ -68,7 +69,8 @@ public class Suggest {
                 item.score = 0;
                 scores.add(item);
                 markBySkill(skills);
-                markByEmployer(peers);
+                markByRate();
+                markByPeer(peers);
             }
         });
 
@@ -113,6 +115,15 @@ public class Suggest {
         });
     }
 
+    void markByRate(){
+        scores.forEach(item -> {
+            int cur = item.job.getEmployerId();//雇主id
+            User e=userRepository.findById(cur).get();
+            double rate=e.getEmployerRate();
+            item.score+=((rate/fullRate)*100*rateWeight);
+        });
+    }
+
     List<User> getPeers(List<String> skills, int me) {
         List<User> peers = new ArrayList<>();
         List<User> all = userRepository.findAll();
@@ -125,7 +136,7 @@ public class Suggest {
         return peers;
     }
 
-    void markByEmployer(List<User> peers) {
+    void markByPeer(List<User> peers) {
 
     }
 
