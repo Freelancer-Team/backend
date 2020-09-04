@@ -27,6 +27,15 @@ public class User {
     private double employerRate;
     private int employerNum;
     private int isShow;
+    private String icon;
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public String getIcon() {
+        return icon;
+    }
 
     public int getIsShow() {
         return isShow;
