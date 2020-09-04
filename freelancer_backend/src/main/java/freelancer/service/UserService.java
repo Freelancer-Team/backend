@@ -1,6 +1,7 @@
 package freelancer.service;
 
 import freelancer.entity.User;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -21,4 +22,5 @@ public interface UserService {
     void updateNum();
     void setUserRole(int userId,int role);
     void setShow(int userId);
+    void updateUserInfo(int id, String name, String gender, int age, String address, String phone, String description,String image);
 }
