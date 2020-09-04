@@ -25,11 +25,22 @@ public class UserController {
         return userService.getUsers();
     }
 
+    @UserLoginToken
+    @PostMapping("/updateUserInfo")
+    public void updateUserInfo(@RequestParam("userId") int userId, @RequestParam("name") String name, @RequestParam("gender") String gender,
+                               @RequestParam("age") int age, @RequestParam("address") String address, @RequestParam("phone") String phone,
+                               @RequestParam("description") String description, @RequestParam("image") String image
+                               )
+    {
+        userService.updateUserInfo(userId,name,gender,age,address,phone,description,image);
+    }
+
     //登录
     @PassToken
     @PostMapping("/login")
     public Object login(@RequestParam("email") String email,@RequestParam("password") String password){
         System.out.println(email);
+
         System.out.println(password);
         JSONObject jsonObject=new JSONObject();
         User userForBase=userService.findUserByemail(email);

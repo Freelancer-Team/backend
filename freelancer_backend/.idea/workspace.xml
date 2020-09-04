@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/UserServiceImpl.java" afterDir="false" />
-    </list>
+    <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="188" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -42,6 +39,10 @@
       </path>
     </expand>
     <select />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\13661\Desktop" />
   </component>
   <component name="FavoritesManager">
     <favorites_list name="freelancer_backend" />
@@ -102,7 +103,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="E:/web sample/Bookstore-react-native" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -167,15 +168,26 @@
     </configuration>
     <configuration name="JobServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
-      <extension name="coverage">
+      <useClassPathOnly />
+      <extension name="coverage" sample_coverage="false">
         <pattern>
           <option name="PATTERN" value="freelancer.service.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="freelancer.service.JobService" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="freelancer.serviceimpl.JobServiceImpl" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
       <option name="MAIN_CLASS_NAME" value="freelancer.service.JobServiceTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -228,9 +240,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JobServiceTest" />
         <item itemvalue="JUnit.UserServiceTest" />
         <item itemvalue="JUnit.SkillServiceTest" />
-        <item itemvalue="JUnit.JobServiceTest" />
         <item itemvalue="JUnit.AuctionServiceTest" />
         <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
       </list>
@@ -348,7 +360,8 @@
       <workItem from="1595907241008" duration="3355000" />
       <workItem from="1596087206405" duration="5048000" />
       <workItem from="1599118746924" duration="5342000" />
-      <workItem from="1599203387977" duration="1342000" />
+      <workItem from="1599203387977" duration="3897000" />
+      <workItem from="1599208688515" duration="6798000" />
     </task>
     <servers />
   </component>
@@ -364,18 +377,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595841747402" />
-    <state x="29" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595260230170">
+    <state x="29" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599209616652">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="29" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1595260230170" />
+    <state x="29" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599209616652" />
+    <state x="334" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599207316212">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="334" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1599207316212" />
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser" timestamp="1594826565098">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594826565098" />
-    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1594778355402">
+    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1599209612431">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1594778355402" />
+    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1599209612431" />
     <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594953813834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -392,50 +409,50 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1599204979035" />
-    <state x="462" y="98" key="FileChooserDialogImpl" timestamp="1594358073479">
+    <state x="462" y="98" key="FileChooserDialogImpl" timestamp="1599210130733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1594358073479" />
-    <state width="1323" height="220" key="GridCell.Tab.0.bottom" timestamp="1599205059687">
+    <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599210130733" />
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom" timestamp="1599221329345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
-    <state width="1323" height="220" key="GridCell.Tab.0.center" timestamp="1599205059687">
+    <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
+    <state width="1323" height="196" key="GridCell.Tab.0.center" timestamp="1599221329345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
-    <state width="1323" height="220" key="GridCell.Tab.0.left" timestamp="1599205059687">
+    <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
+    <state width="1323" height="196" key="GridCell.Tab.0.left" timestamp="1599221329344">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
-    <state width="1323" height="220" key="GridCell.Tab.0.right" timestamp="1599205059687">
+    <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599221329344" />
+    <state width="1323" height="196" key="GridCell.Tab.0.right" timestamp="1599221329345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
-    <state width="1323" height="220" key="GridCell.Tab.1.bottom" timestamp="1599205059688">
+    <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
+    <state width="1323" height="196" key="GridCell.Tab.1.bottom" timestamp="1599221329346">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599205059688" />
-    <state width="1323" height="220" key="GridCell.Tab.1.center" timestamp="1599205059687">
+    <state width="1323" height="196" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599221329346" />
+    <state width="1323" height="196" key="GridCell.Tab.1.center" timestamp="1599221329345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
-    <state width="1323" height="220" key="GridCell.Tab.1.left" timestamp="1599205059687">
+    <state width="1323" height="196" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
+    <state width="1323" height="196" key="GridCell.Tab.1.left" timestamp="1599221329345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
-    <state width="1323" height="220" key="GridCell.Tab.1.right" timestamp="1599205059687">
+    <state width="1323" height="196" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
+    <state width="1323" height="196" key="GridCell.Tab.1.right" timestamp="1599221329345">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="220" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599205059687" />
+    <state width="1323" height="196" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1595346785017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595346785017" />
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1599203395337">
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1599221372957">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1599203395337" />
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1599221372957" />
     <state x="579" y="60" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594957490701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -448,5 +465,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595840770805" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/freelancer_backend$JobServiceTest.ic" NAME="JobServiceTest Coverage Results" MODIFIED="1599209618985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>freelancer.serviceimpl.JobServiceImpl</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -21,6 +21,19 @@ public class UserServiceImpl implements UserService {
     private UserRepository userRepository;
 
     @Override
+    public void updateUserInfo(int userId, String name, String gender, int age, String address, String phone, String description,String icon){
+        User user = userRepository.findById(userId).get();
+        user.setName(name);
+        user.setGender(gender);
+        user.setAge(age);
+        user.setAddress(address);
+        user.setPhone(phone);
+        user.setDescription(description);
+        user.setIcon(icon);
+        userRepository.save(user);
+    };
+
+    @Override
     public User findUserByemail(String email){
         return userRepository.findUserByemail(email);
     }
