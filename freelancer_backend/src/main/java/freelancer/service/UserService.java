@@ -20,6 +20,5 @@ public interface UserService {
     User findUserByemail(String email);
     void updateNum();
     void setUserRole(int userId,int role);
-    void addShow();
     void setShow(int userId);
 }

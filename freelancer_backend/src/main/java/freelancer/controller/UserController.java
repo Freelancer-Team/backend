@@ -96,10 +96,8 @@ public class UserController {
     @RequestMapping("/updateNum")
     public void updateNum(){userService.updateNum();}
 
-    @RequestMapping("/addShow")
-    public void addShow(){userService.addShow();}
-
-    @ManagerLoginToken
+    @UserLoginToken
     @PostMapping("/setShow")
     public void setShow(@RequestParam("userId") int userId){userService.setShow(userId);}
+
   }
