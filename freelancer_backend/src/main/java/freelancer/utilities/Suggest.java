@@ -27,24 +27,24 @@ class JScore implements Comparable<JScore> {
 
 public class Suggest {
     @Autowired
-    private JobRepository jobRepository;
+    private JobRepository jobRepository = SpringContextUtil.getBean(JobRepository.class);
     @Autowired
-    private UserRepository userRepository;
+    private UserRepository userRepository = SpringContextUtil.getBean(UserRepository.class);
     @Autowired
-    private JobService jobService;
+    private JobService jobService = SpringContextUtil.getBean(JobService.class);
 
-    List<JScore> scores;
+    List<JScore> scores = new ArrayList<>();
 
     //各参数
     double skillWeight = 0.6;//技能点覆盖率的权重
     double rateWeight = 0.1;//雇主整体评分的权重
     double peerWeight = 0.3;//同行评分的权重
-    double defaultRate=2.5;//无同行评分时默认分数
+    double defaultRate = 2.5;//无同行评分时默认分数
     double blackRate = 2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
-    int fullRate=5;//评分的满分
+    int fullRate = 5;//评分的满分
 
     List<Job> normalSuggest() {
-        List<Job> jobs = jobService.getCurrentJobs();
+        List<Job> jobs = jobService.getJobs();//getCurrentJobs();
         List<Job> jobs1 = new ArrayList<>();
         for (int i = 0; i < 8; i++)
             jobs1.add(jobs.get(i));
@@ -53,17 +53,25 @@ public class Suggest {
 
     public List<Job> getSuggest(int userId) {
         List<Job> jobs = jobService.getCurrentJobs();
-        User user = userRepository.findById(userId).get();
 
+        //未登录或无相关资料的随机推荐job
+        if (userId == 0) return normalSuggest();
+        User user = userRepository.findById(userId).get();
+        if (jobs.size() <= 0 || user == null)
+            return normalSuggest();
         List<String> skills = user.getSkills();
-        if (skills.size() <= 0 || userId == 0)
-            return normalSuggest();//未登录或无相关资料的随机推荐job
+        if (skills.size() <= 0)
+            return normalSuggest();
+
         List<Integer> peers = getPeers(skills, userId);//拥有相同技能的人
         List<Integer> blackList = getBlackList(userId);
 
         //获得scores
         jobs.forEach(job -> {
+//        for(int i=0;i<100;i++){
+//            Job job=jobs.get(i);
             if (!blackList.contains(job.getEmployerId())) {
+//            System.out.println(job.getId());
                 JScore item = new JScore();
                 item.job = job;
                 item.score = 0;
@@ -71,6 +79,7 @@ public class Suggest {
                 markBySkill(skills);
                 markByRate();
                 markByPeer(peers);
+//            }}
             }
         });
 
@@ -87,19 +96,20 @@ public class Suggest {
     void markBySkill(List<String> skills) {
         scores.forEach(item -> {
             List<String> cur = item.job.getSkills();
-            double allNum=cur.size();
+            double allNum = cur.size();
             cur.retainAll(skills);//cur取交集
-            double coverNum=cur.size();
-            item.score+=((coverNum/allNum)*100*skillWeight);
+            double coverNum = cur.size();
+            if (allNum == 0) allNum = coverNum;
+            item.score += ((coverNum / allNum) * 100 * skillWeight);
         });
     }
 
-    void markByRate(){
+    void markByRate() {
         scores.forEach(item -> {
             int cur = item.job.getEmployerId();//雇主id
-            User e=userRepository.findById(cur).get();
-            double rate=e.getEmployerRate();
-            item.score+=((rate/fullRate)*100*rateWeight);
+            User e = userRepository.findById(cur).get();
+            double rate = e.getEmployerRate();
+            item.score += ((rate / fullRate) * 100 * rateWeight);
         });
     }
 
@@ -116,19 +126,21 @@ public class Suggest {
     }
 
     void markByPeer(List<Integer> peers) {
-        scores.forEach(item->{
-            int e=item.job.getEmployerId();
-            List<Job> historyJobs=jobRepository.findAsEmployer(e);
-            int l=historyJobs.size();
-            double allRate=0;
-            int sum=0;
-            for(int i=0;i<l;i++){
-                Job job=historyJobs.get(i);
-                if(peers.contains(job.getEmployerId()))
-                {allRate+=job.getEmployerRate();sum++;}
+        scores.forEach(item -> {
+            int e = item.job.getEmployerId();
+            List<Job> historyJobs = jobRepository.findAsEmployer(e);
+            int l = historyJobs.size();
+            double allRate = 0;
+            int sum = 0;
+            for (int i = 0; i < l; i++) {
+                Job job = historyJobs.get(i);
+                if (peers.contains(job.getEmployerId())) {
+                    allRate += job.getEmployerRate();
+                    sum++;
+                }
             }
-            if(sum!=0) item.score+=(((allRate/sum)/fullRate)*100*peerWeight);
-            else item.score+=((defaultRate/fullRate)*100*peerWeight);
+            if (sum != 0) item.score += (((allRate / sum) / fullRate) * 100 * peerWeight);
+            else item.score += ((defaultRate / fullRate) * 100 * peerWeight);
         });
     }
 
@@ -142,7 +154,7 @@ public class Suggest {
     }
 
 //    void sort(){
-        //排序
+    //排序
 //        double max = 0;
 //        double min = 10000;
 //        int sum = scores.size();

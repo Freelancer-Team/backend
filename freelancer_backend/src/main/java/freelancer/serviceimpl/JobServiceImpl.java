@@ -24,6 +24,8 @@ import java.util.Date;
 public class JobServiceImpl implements JobService {
     @Autowired
     private JobRepository jobRepository;
+//    public Suggest suggest;
+
     private Suggest suggest;
 
     @Override
@@ -86,7 +88,8 @@ public class JobServiceImpl implements JobService {
 //        for(int i=0;i<8;i++)
 //          jobs1.add(jobs.get(i));
 //        return jobs1;
-        return  suggest.getSuggest(userId);
+        Suggest suggest=new Suggest();
+        return suggest.getSuggest(userId);
     }
 
     @Override
