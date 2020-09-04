@@ -9,8 +9,11 @@ import java.util.List;
 
 
 public interface JobRepository extends MongoRepository<Job, String> {
-//    @Query("{ skills: ?0}")
+    //    @Query("{ skills: ?0}")
 //    public List<Job> findJobs(String skills);
-@Query(value="{'$and': [{ 'employeeId':?0}]}")
-List<Job> findAsEmployee(int id);
+    @Query(value = "{'$and': [{ 'employeeId':?0}]}")
+    List<Job> findAsEmployee(int id);
+
+    @Query(value = "{'$and': [{ 'employerId':?0}]}")
+    List<Job> findAsEmployer(int id);
 }

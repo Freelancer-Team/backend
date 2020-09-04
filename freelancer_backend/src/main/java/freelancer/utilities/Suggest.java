@@ -1,7 +1,6 @@
 package freelancer.utilities;
 
 import freelancer.entity.Job;
-import freelancer.entity.Skill;
 import freelancer.entity.User;
 import freelancer.service.JobService;
 import freelancer.repository.JobRepository;
@@ -40,6 +39,7 @@ public class Suggest {
     double skillWeight = 0.6;//技能点覆盖率的权重
     double rateWeight = 0.1;//雇主整体评分的权重
     double peerWeight = 0.3;//同行评分的权重
+    double defaultRate=2.5;//无同行评分时默认分数
     double blackRate = 2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
     int fullRate=5;//评分的满分
 
@@ -58,7 +58,7 @@ public class Suggest {
         List<String> skills = user.getSkills();
         if (skills.size() <= 0 || userId == 0)
             return normalSuggest();//未登录或无相关资料的随机推荐job
-        List<User> peers = getPeers(skills, userId);//拥有相同技能的人
+        List<Integer> peers = getPeers(skills, userId);//拥有相同技能的人
         List<Integer> blackList = getBlackList(userId);
 
         //获得scores
@@ -74,27 +74,6 @@ public class Suggest {
             }
         });
 
-        //排序
-//        double max = 0;
-//        double min = 10000;
-//        int sum = scores.size();
-//        List<JScore> suggest = new ArrayList<>();
-//        for (int i = 0; i < sum; i++) {
-//            JScore cur = scores.get(i);
-//            double score = cur.score;
-//            if (i < 8) {
-//                if (score > max) max = score;
-//                if (score < min) min = score;
-//                suggest.add(cur);
-//                Collections.sort(suggest);//排序
-//            } else {
-//                if (score > max) {
-//                    max = score;
-//                    suggest.add(cur);
-//                    //未完成
-//                }
-//            }
-//        }
         List<Job> suggestJob = new ArrayList<>();
         Collections.sort(scores);
         for (int i = 0; i < 8; i++) {
@@ -124,20 +103,33 @@ public class Suggest {
         });
     }
 
-    List<User> getPeers(List<String> skills, int me) {
-        List<User> peers = new ArrayList<>();
+    List<Integer> getPeers(List<String> skills, int me) {
+        List<Integer> peers = new ArrayList<>();
         List<User> all = userRepository.findAll();
         all.forEach(user -> {
             List<String> cur = user.getSkills();
             if (user.getId() != me && (cur == skills || skills.containsAll(cur))) {
-                peers.add(user);
+                peers.add(user.getId());
             }
         });
         return peers;
     }
 
-    void markByPeer(List<User> peers) {
-
+    void markByPeer(List<Integer> peers) {
+        scores.forEach(item->{
+            int e=item.job.getEmployerId();
+            List<Job> historyJobs=jobRepository.findAsEmployer(e);
+            int l=historyJobs.size();
+            double allRate=0;
+            int sum=0;
+            for(int i=0;i<l;i++){
+                Job job=historyJobs.get(i);
+                if(peers.contains(job.getEmployerId()))
+                {allRate+=job.getEmployerRate();sum++;}
+            }
+            if(sum!=0) item.score+=(((allRate/sum)/fullRate)*100*peerWeight);
+            else item.score+=((defaultRate/fullRate)*100*peerWeight);
+        });
     }
 
     List<Integer> getBlackList(int userId) {
@@ -148,5 +140,29 @@ public class Suggest {
         });
         return black;
     }
+
+//    void sort(){
+        //排序
+//        double max = 0;
+//        double min = 10000;
+//        int sum = scores.size();
+//        List<JScore> suggest = new ArrayList<>();
+//        for (int i = 0; i < sum; i++) {
+//            JScore cur = scores.get(i);
+//            double score = cur.score;
+//            if (i < 8) {
+//                if (score > max) max = score;
+//                if (score < min) min = score;
+//                suggest.add(cur);
+//                Collections.sort(suggest);//排序
+//            } else {
+//                if (score > max) {
+//                    max = score;
+//                    suggest.add(cur);
+//                    //未完成
+//                }
+//            }
+//        }
+//    }
 
 }
