@@ -9,10 +9,6 @@ public interface JobService {
     List<Job> getJobs();
     Job saveJob(Job job);
     Job getJob(String id);
-    void createRelation();
-    void updateRelation();
-    void createAuction();
-    void fixPrice();
     Job assignJob(int userId,String userName,String jobId);
     Job updateJobSkills(List<String> skills,String jobId);
     List<Job> getSuggestJobs();

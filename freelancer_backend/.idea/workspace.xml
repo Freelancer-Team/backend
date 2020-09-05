@@ -1,14 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="" />
+    <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/JobController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/JobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/JobService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/JobServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freelancer/service/AuctionServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freelancer/service/AuctionServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freelancer/service/JobServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freelancer/service/JobServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/freelancer/service/UserServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/freelancer/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jobs.json" beforeDir="false" afterPath="$PROJECT_DIR$/../jobs.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="188" />
+    <option name="myElementSize" value="75" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -137,31 +149,22 @@
   <component name="RunManager" selected="Spring Boot.FreelancerApplication">
     <configuration name="AuctionServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
-      <extension name="coverage">
+      <useClassPathOnly />
+      <extension name="coverage" sample_coverage="false">
         <pattern>
           <option name="PATTERN" value="freelancer.service.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="freelancer.serviceimpl.AuctionServiceImpl" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
       <option name="MAIN_CLASS_NAME" value="freelancer.service.AuctionServiceTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuctionServiceTest.applyJob" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="freelancer_backend" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="freelancer.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="freelancer.service" />
-      <option name="MAIN_CLASS_NAME" value="freelancer.service.AuctionServiceTest" />
-      <option name="METHOD_NAME" value="applyJob" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -172,10 +175,6 @@
       <extension name="coverage" sample_coverage="false">
         <pattern>
           <option name="PATTERN" value="freelancer.service.*" />
-          <option name="ENABLED" value="false" />
-        </pattern>
-        <pattern>
-          <option name="PATTERN" value="freelancer.service.JobService" />
           <option name="ENABLED" value="false" />
         </pattern>
         <pattern>
@@ -194,20 +193,49 @@
     </configuration>
     <configuration name="SkillServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
-      <extension name="coverage">
+      <useClassPathOnly />
+      <extension name="coverage" sample_coverage="false">
         <pattern>
           <option name="PATTERN" value="freelancer.service.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="freelancer.serviceimpl.SkillServiceImpl" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
       <option name="MAIN_CLASS_NAME" value="freelancer.service.SkillServiceTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="UserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="freelancer_backend" />
+      <useClassPathOnly />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="freelancer.service.*" />
+          <option name="ENABLED" value="false" />
+        </pattern>
+        <pattern>
+          <option name="PATTERN" value="freelancer.serviceimpl.UserServiceImpl" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="freelancer.service" />
+      <option name="MAIN_CLASS_NAME" value="freelancer.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.signup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="freelancer_backend" />
       <extension name="coverage">
         <pattern>
@@ -217,7 +245,8 @@
       </extension>
       <option name="PACKAGE_NAME" value="freelancer.service" />
       <option name="MAIN_CLASS_NAME" value="freelancer.service.UserServiceTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="signup" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -231,20 +260,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
-      <item itemvalue="JUnit.AuctionServiceTest" />
-      <item itemvalue="JUnit.UserServiceTest" />
+      <item itemvalue="JUnit.UserServiceTest.signup" />
       <item itemvalue="JUnit.JobServiceTest" />
       <item itemvalue="JUnit.SkillServiceTest" />
+      <item itemvalue="JUnit.AuctionServiceTest" />
+      <item itemvalue="JUnit.UserServiceTest" />
       <item itemvalue="Spring Boot.FreelancerApplication" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.JobServiceTest" />
         <item itemvalue="JUnit.UserServiceTest" />
-        <item itemvalue="JUnit.SkillServiceTest" />
         <item itemvalue="JUnit.AuctionServiceTest" />
-        <item itemvalue="JUnit.AuctionServiceTest.applyJob" />
+        <item itemvalue="JUnit.SkillServiceTest" />
+        <item itemvalue="JUnit.JobServiceTest" />
+        <item itemvalue="JUnit.UserServiceTest.signup" />
       </list>
     </recent_temporary>
   </component>
@@ -362,6 +391,8 @@
       <workItem from="1599118746924" duration="5342000" />
       <workItem from="1599203387977" duration="3897000" />
       <workItem from="1599208688515" duration="6798000" />
+      <workItem from="1599221372316" duration="6065000" />
+      <workItem from="1599287186385" duration="12400000" />
     </task>
     <servers />
   </component>
@@ -377,10 +408,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="119" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/0.0.1366.728@0.0.1366.728" timestamp="1595841747402" />
-    <state x="29" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599209616652">
+    <state x="198" y="53" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599307891425">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="29" y="48" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599209616652" />
+    <state x="198" y="53" width="1034" height="674" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1599307891425" />
     <state x="334" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1599207316212">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -389,10 +420,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="488" y="73" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1594826565098" />
-    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1599209612431">
+    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1599307887314">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1599209612431" />
+    <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1599307887314" />
     <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594953813834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -413,46 +444,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599210130733" />
-    <state width="1323" height="196" key="GridCell.Tab.0.bottom" timestamp="1599221329345">
+    <state width="1323" height="237" key="GridCell.Tab.0.bottom" timestamp="1599308042363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
-    <state width="1323" height="196" key="GridCell.Tab.0.center" timestamp="1599221329345">
+    <state width="1323" height="237" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599308042363" />
+    <state width="1323" height="237" key="GridCell.Tab.0.center" timestamp="1599308042363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
-    <state width="1323" height="196" key="GridCell.Tab.0.left" timestamp="1599221329344">
+    <state width="1323" height="237" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599308042363" />
+    <state width="1323" height="237" key="GridCell.Tab.0.left" timestamp="1599308042363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599221329344" />
-    <state width="1323" height="196" key="GridCell.Tab.0.right" timestamp="1599221329345">
+    <state width="1323" height="237" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599308042363" />
+    <state width="1323" height="237" key="GridCell.Tab.0.right" timestamp="1599308042363">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
-    <state width="1323" height="196" key="GridCell.Tab.1.bottom" timestamp="1599221329346">
+    <state width="1323" height="237" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599308042363" />
+    <state width="1323" height="26" key="GridCell.Tab.1.bottom" timestamp="1599304620600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599221329346" />
-    <state width="1323" height="196" key="GridCell.Tab.1.center" timestamp="1599221329345">
+    <state width="1323" height="26" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599304620600" />
+    <state width="1323" height="26" key="GridCell.Tab.1.center" timestamp="1599304620600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
-    <state width="1323" height="196" key="GridCell.Tab.1.left" timestamp="1599221329345">
+    <state width="1323" height="26" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599304620600" />
+    <state width="1323" height="26" key="GridCell.Tab.1.left" timestamp="1599304620600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
-    <state width="1323" height="196" key="GridCell.Tab.1.right" timestamp="1599221329345">
+    <state width="1323" height="26" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599304620600" />
+    <state width="1323" height="26" key="GridCell.Tab.1.right" timestamp="1599304620600">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="196" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599221329345" />
+    <state width="1323" height="26" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599304620600" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1595346785017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="213" y="19" key="Maven.ArtifactSearchDialog/0.0.1366.728@0.0.1366.728" timestamp="1595346785017" />
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1599221372957">
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog" timestamp="1599287215733">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1599221372957" />
+    <state x="261" y="273" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1599287215733" />
     <state x="579" y="60" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1594957490701">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -467,7 +498,19 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1595840770805" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/freelancer_backend$JobServiceTest.ic" NAME="JobServiceTest Coverage Results" MODIFIED="1599209618985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+    <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest.ic" NAME="AuctionServiceTest Coverage Results" MODIFIED="1599308028173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>freelancer.serviceimpl.AuctionServiceImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/freelancer_backend$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1599308042339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>freelancer.serviceimpl.UserServiceImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/freelancer_backend$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1599307938507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>freelancer.serviceimpl.SkillServiceImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest_getAuction__1_.ic" NAME="AuctionServiceTest.getAuction (1) Coverage Results" MODIFIED="1599223095587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>freelancer.service.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/freelancer_backend$JobServiceTest.ic" NAME="JobServiceTest Coverage Results" MODIFIED="1599307915888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>freelancer.serviceimpl.JobServiceImpl</FILTER>
     </SUITE>
   </component>

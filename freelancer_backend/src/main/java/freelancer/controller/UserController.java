@@ -74,9 +74,6 @@ public class UserController {
     @RequestMapping("/getUserSkills")
     public List<String> getUserSkills(@RequestParam("id") Integer id){return userService.getUserSkills(id);}
 
-    //生成数据使用
-    @RequestMapping("/createData")
-    public void createData(){userService.createData();}
 
     //通过id获得user
     @UserLoginToken
@@ -87,10 +84,6 @@ public class UserController {
     @UserLoginToken
     @RequestMapping("/saveUser")
     public User saveUser(@RequestBody User user){return userService.saveUser(user);}
-
-    //生成用户评分
-    @RequestMapping("/createRate")
-    public void createRate(){ userService.createRate();}
 
     @UserLoginToken
     @RequestMapping("/updateSkills")
@@ -103,9 +96,6 @@ public class UserController {
     public void setUserRole(@RequestParam("userId") int userId,@RequestParam("role") int role){
         userService.setUserRole(userId,role);
     }
-
-    @RequestMapping("/updateNum")
-    public void updateNum(){userService.updateNum();}
 
     @UserLoginToken
     @PostMapping("/setShow")
