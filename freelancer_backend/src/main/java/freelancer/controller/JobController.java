@@ -65,19 +65,6 @@ public class JobController {
     @RequestMapping("/setJobState")
     public void setJobState(@RequestParam("jobId") String jobId,@RequestParam("state") int state){jobService.setJobState(jobId,state);}
 
-    //生成数据使用
-    @RequestMapping("/createRelation")
-    public void createRelation(){jobService.createRelation();}
-
-    //更新新增数据使用
-    @RequestMapping("/updateRelation")
-    public void updateRelation(){jobService.updateRelation();}
-
-    @RequestMapping("createAuction")
-    public void createAuction(){jobService.createAuction();}
-
-    @RequestMapping("fixPrice")
-    public void fixPrice(){jobService.fixPrice();}
     //雇主指定雇员接受任务
     @UserLoginToken
     @RequestMapping("/assignJob")
