@@ -101,4 +101,7 @@ public class UserController {
     @PostMapping("/setShow")
     public void setShow(@RequestParam("userId") int userId){userService.setShow(userId);}
 
+    @PassToken
+    @GetMapping("/getOnesIcon")
+    public List<String> getOnesIcon(@RequestParam("userId") int userId){return userService.getOnesIcon(userId);}
   }
