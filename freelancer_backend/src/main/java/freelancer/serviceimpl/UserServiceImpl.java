@@ -20,6 +20,16 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;
 
+
+    @Override
+    public List<String> getOnesIcon(int userId){
+      List<String> res = new ArrayList<>();
+      User user = userRepository.findById(userId).get();
+      res.add(user.getName());
+      res.add(user.getIcon());
+      return res;
+    };
+
     @Override
     public void updateUserInfo(int userId, String name, String gender, int age, String address, String phone, String description,String icon){
         User user = userRepository.findById(userId).get();
@@ -30,6 +40,7 @@ public class UserServiceImpl implements UserService {
         user.setPhone(phone);
         user.setDescription(description);
         user.setIcon(icon);
+        user.setRole(-2);
         userRepository.save(user);
     };
 

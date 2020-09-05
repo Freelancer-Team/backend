@@ -132,6 +132,7 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public Job saveJob(Job job){
+        job.setState(-3);
         return jobRepository.save(job);
     }
 
