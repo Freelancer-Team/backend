@@ -82,14 +82,14 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
-    public List<Job> getSuggestJobs(int userId){
+    public List<Job> getSuggestJobs(int userId,int cnt){
 //        List<Job> jobs = jobRepository.findAll();
 //        List<Job> jobs1 = new ArrayList<>();
 //        for(int i=0;i<8;i++)
 //          jobs1.add(jobs.get(i));
 //        return jobs1;
         Suggest suggest=new Suggest();
-        return suggest.getSuggest(userId);
+        return suggest.getSuggest(userId,cnt);
     }
 
     @Override

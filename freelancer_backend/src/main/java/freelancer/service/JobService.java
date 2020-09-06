@@ -15,7 +15,7 @@ public interface JobService {
     void fixPrice();
     Job assignJob(int userId,String userName,String jobId);
     Job updateJobSkills(List<String> skills,String jobId);
-    List<Job> getSuggestJobs(int userId);
+    List<Job> getSuggestJobs(int userId,int cnt);
     List<Job> getCurrentJobs();
     void setJobState(String jobId,int state);
     List<Job> getEmployeeJob(int userId);

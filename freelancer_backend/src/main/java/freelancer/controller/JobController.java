@@ -18,7 +18,7 @@ public class JobController {
     //获得推荐job
     @PassToken
     @RequestMapping("/getSuggestJobs")
-    public List<Job> getSuggestJobs(@RequestParam("userId") int userId) {return jobService.getSuggestJobs(userId);}
+    public List<Job> getSuggestJobs(@RequestParam("userId") int userId,@RequestParam("cnt") int cnt) {return jobService.getSuggestJobs(userId,cnt);}
 
     //获得作为雇员的工作信息
     @UserLoginToken
