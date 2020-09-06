@@ -5,6 +5,8 @@ import freelancer.repository.JobRepository;
 import freelancer.service.JobService;
 import freelancer.utilities.Suggest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
@@ -14,6 +16,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Date;
 
+@EnableCaching
 @Service
 public class JobServiceImpl implements JobService {
     @Autowired
@@ -108,7 +111,9 @@ public class JobServiceImpl implements JobService {
         return job;
     }
 
+
     @Override
+    @Cacheable(value ="sampleCache")
     public List<Job> getCurrentJobs(){
         List<Job> jobs = jobRepository.findAll();
         Job job;
