@@ -17,26 +17,26 @@ public class JobController {
 
     //获得推荐job
     @PassToken
-    @RequestMapping("/getSuggestJobs")
+    @PostMapping("/getSuggestJobs")
     public List<Job> getSuggestJobs(@RequestParam("userId") int userId,@RequestParam("cnt") int cnt) {return jobService.getSuggestJobs(userId,cnt);}
 
     //获得作为雇员的工作信息
     @UserLoginToken
-    @RequestMapping("/getEmployeeJob")
+    @GetMapping("/getEmployeeJob")
     public List<Job> getEmployeeJob(@RequestParam("userId") int userId){
         return jobService.getEmployeeJob(userId);
     }
 
     //获得作为雇主的工作信息
     @UserLoginToken
-    @RequestMapping("/getEmployerJob")
+    @GetMapping("/getEmployerJob")
     public List<Job> getEmployerJob(@RequestParam("userId") int userId){
         return jobService.getEmployerJob(userId);
     }
 
     //获得所有job
     @ManagerLoginToken
-    @RequestMapping("/getJobs")
+    @GetMapping("/getJobs")
     public List<Job> getJobs() {
         return jobService.getJobs();
     }
@@ -48,38 +48,38 @@ public class JobController {
 
     //保存job
     @UserLoginToken
-    @RequestMapping("/saveJob")
+    @PostMapping("/saveJob")
     public Job saveJob(@RequestBody Job job) {
         return jobService.saveJob(job);
     }
 
     //使用id获得job
     @PassToken
-    @RequestMapping("/getJob")
+    @PostMapping("/getJob")
     public Job getJob(@RequestParam("id") String id) {
         return jobService.getJob(id);
     }
 
     //更新job状态
     @UserLoginToken
-    @RequestMapping("/setJobState")
+    @PostMapping("/setJobState")
     public void setJobState(@RequestParam("jobId") String jobId,@RequestParam("state") int state){jobService.setJobState(jobId,state);}
 
     //雇主指定雇员接受任务
     @UserLoginToken
-    @RequestMapping("/assignJob")
+    @PostMapping("/assignJob")
     public Job assignJob(@RequestParam("userId") int userId, @RequestParam("userName") String userName,@RequestParam("jobId") String jobId)
     {
         return jobService.assignJob(userId,userName,jobId);
     }
 
     @UserLoginToken
-    @RequestMapping("/updateJobSkills")
+    @PostMapping("/updateJobSkills")
     public Job updateJobSkills(@RequestBody List<String> skills, @RequestParam("jobId") String jobId){
         return jobService.updateJobSkills(skills,jobId);
     }
 
-//    @UserLoginToken
+    @ManagerLoginToken
     @GetMapping("/getStatistics")
     public List<Integer> getStatistics(@RequestParam("year") int year,@RequestParam("lowMonth") int lowMonth,@RequestParam("highMonth") int highMonth)
     {
