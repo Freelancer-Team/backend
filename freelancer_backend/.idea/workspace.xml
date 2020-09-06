@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/utilities/Suggest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/utilities/Suggest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,6 +386,7 @@
       <workItem from="1599287186385" duration="14807000" />
       <workItem from="1599376434973" duration="11545000" />
       <workItem from="1599392393660" duration="1379000" />
+      <workItem from="1599399392288" duration="1353000" />
     </task>
     <servers />
   </component>
@@ -490,17 +492,17 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599384105385" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest.ic" NAME="AuctionServiceTest Coverage Results" MODIFIED="1599308028173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>freelancer.serviceimpl.AuctionServiceImpl</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/freelancer_backend$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1599308042339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>freelancer.serviceimpl.UserServiceImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest_getAuction__1_.ic" NAME="AuctionServiceTest.getAuction (1) Coverage Results" MODIFIED="1599223095587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>freelancer.service.*</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/freelancer_backend$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1599307938507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>freelancer.serviceimpl.SkillServiceImpl</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest_getAuction__1_.ic" NAME="AuctionServiceTest.getAuction (1) Coverage Results" MODIFIED="1599223095587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>freelancer.service.*</FILTER>
+    <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest.ic" NAME="AuctionServiceTest Coverage Results" MODIFIED="1599308028173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>freelancer.serviceimpl.AuctionServiceImpl</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/freelancer_backend$JobServiceTest.ic" NAME="JobServiceTest Coverage Results" MODIFIED="1599307915888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>freelancer.serviceimpl.JobServiceImpl</FILTER>
