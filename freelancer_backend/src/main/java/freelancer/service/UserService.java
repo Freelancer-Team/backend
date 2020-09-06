@@ -1,7 +1,6 @@
 package freelancer.service;
 
 import freelancer.entity.User;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 

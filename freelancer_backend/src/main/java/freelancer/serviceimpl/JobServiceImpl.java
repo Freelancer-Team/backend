@@ -1,17 +1,14 @@
 package freelancer.serviceimpl;
 
 import freelancer.entity.Job;
-import freelancer.entity.User;
 import freelancer.repository.JobRepository;
-import freelancer.repository.UserRepository;
-import freelancer.service.AuctionService;
 import freelancer.service.JobService;
+import freelancer.utilities.Suggest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -21,6 +18,35 @@ import java.util.Date;
 public class JobServiceImpl implements JobService {
     @Autowired
     private JobRepository jobRepository;
+
+    @Override
+    public List<Integer> getStatistics(int year, int lowMonth, int highMonth) {
+        int cnt;
+        List<Integer> res = new ArrayList<>();
+        List<Job> jobs = jobRepository.findAll();
+        int size = jobs.size();
+        for(int i=lowMonth;i<=highMonth;i++)
+        {
+            cnt=0;
+            res.add(cnt);
+        }
+        String time;
+        for(int i=0;i<size;i++)
+        {
+            time = jobs.get(i).getPublishTime();
+            String[] str1 = time.split(" ");
+
+            String s = str1[0].replace("."," ");
+            String[] str2 = s.split(" ");
+            int index;
+            if(year == Integer.parseInt(str2[0]) && Integer.parseInt(str2[1]) >=lowMonth && Integer.parseInt(str2[1])<=highMonth)
+                {
+                    index = Integer.parseInt(str2[1])-lowMonth;
+                    res.set(index,res.get(index)+1);
+                }
+        }
+        return res;
+    }
 
     @Override
     public List<Job> getJobs() {
@@ -58,6 +84,12 @@ public class JobServiceImpl implements JobService {
     }
 
     @Override
+    public List<Job> getSuggestJobs(int userId,int cnt){
+        Suggest suggest=new Suggest();
+        return suggest.getSuggest(userId,cnt);
+    }
+
+    @Override
     public void setJobState(String jobId,int state){
         Job job = jobRepository.findById(jobId).get();
         job.setState(state);
@@ -71,17 +103,9 @@ public class JobServiceImpl implements JobService {
         job.setEmployeeId(userId);
         SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         job.setStartTime(df.format(new Date()));
+        job.setState(1);
         jobRepository.save(job);
         return job;
-    }
-
-    @Override
-    public List<Job> getSuggestJobs(){
-        List<Job> jobs = jobRepository.findAll();
-        List<Job> jobs1 = new ArrayList<>();
-        for(int i=0;i<8;i++)
-          jobs1.add(jobs.get(i));
-        return jobs1;
     }
 
     @Override

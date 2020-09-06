@@ -18,7 +18,7 @@ public class JobController {
     //获得推荐job
     @PassToken
     @RequestMapping("/getSuggestJobs")
-    public List<Job> getSuggestJobs() {return jobService.getSuggestJobs();}
+    public List<Job> getSuggestJobs(@RequestParam("userId") int userId,@RequestParam("cnt") int cnt) {return jobService.getSuggestJobs(userId,cnt);}
 
     //获得作为雇员的工作信息
     @UserLoginToken
@@ -61,7 +61,7 @@ public class JobController {
     }
 
     //更新job状态
-    @ManagerLoginToken
+    @UserLoginToken
     @RequestMapping("/setJobState")
     public void setJobState(@RequestParam("jobId") String jobId,@RequestParam("state") int state){jobService.setJobState(jobId,state);}
 
@@ -77,5 +77,12 @@ public class JobController {
     @RequestMapping("/updateJobSkills")
     public Job updateJobSkills(@RequestBody List<String> skills, @RequestParam("jobId") String jobId){
         return jobService.updateJobSkills(skills,jobId);
+    }
+
+//    @UserLoginToken
+    @GetMapping("/getStatistics")
+    public List<Integer> getStatistics(@RequestParam("year") int year,@RequestParam("lowMonth") int lowMonth,@RequestParam("highMonth") int highMonth)
+    {
+        return jobService.getStatistics(year,lowMonth,highMonth);
     }
 }
