@@ -70,11 +70,11 @@ public class AuctionServiceImpl implements AuctionService {
             tmp.add(auction.getProjectName());
             tmp.add(Integer.toString(job.getState()));
             if(job.getEmployeeId()==0)
-                tmp.add("等待确认");
+                tmp.add("0");
             else {
                 if(job.getEmployeeId() == auction.getUserId())
-                    tmp.add("竞标成功");
-                else tmp.add("竞标失败");
+                    tmp.add("1");
+                else tmp.add("-1");
             }
             tmp.add(Integer.toString(auction.getPrice()));
             tmp.add(Integer.toString(job.getAvgPrice()));

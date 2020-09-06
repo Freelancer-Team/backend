@@ -2,28 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e197eeba-d44c-4e0d-8bac-baa876e542f3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_registry_prometheus_1_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_0_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_prometheus_simpleclient_common_0_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_10_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_compat_qual_2_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_mojo_animal_sniffer_annotations_1_14.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_3_0.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_72.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_beust_jcommander_1_78.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_19_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_25_1_android.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_no_aop_4_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_no_aop_4_2_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_7_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freelancer_backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/freelancer_backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/entity/Job.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/entity/Job.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/JobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/JobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/freelancer/serviceimpl/AuctionServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +107,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -408,6 +389,7 @@
       <workItem from="1599392393660" duration="1379000" />
       <workItem from="1599399392288" duration="1353000" />
       <workItem from="1599408405116" duration="4991000" />
+      <workItem from="1599421400208" duration="1193000" />
     </task>
     <servers />
   </component>
@@ -439,6 +421,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="403" y="192" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1599307887314" />
+    <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1599421403992">
+      <screen x="0" y="0" width="1792" height="1120" />
+    </state>
+    <state x="745" y="467" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1792.1120@0.0.1792.1120" timestamp="1599421403992" />
     <state x="462" y="222" width="463" height="292" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1594953813834">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -459,38 +445,46 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="462" y="98" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1599210130733" />
-    <state width="1323" height="215" key="GridCell.Tab.0.bottom" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.0.bottom" timestamp="1599422389826">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.0.center" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.0.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389826" />
+    <state width="1750" height="372" key="GridCell.Tab.0.center" timestamp="1599422389825">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.0.left" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.0.center/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389825" />
+    <state width="1750" height="372" key="GridCell.Tab.0.left" timestamp="1599422389824">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.0.right" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.0.left/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389824" />
+    <state width="1750" height="372" key="GridCell.Tab.0.right" timestamp="1599422389825">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.1.bottom" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.0.right/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389825" />
+    <state width="1750" height="372" key="GridCell.Tab.1.bottom" timestamp="1599422389828">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.1.center" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.1.bottom/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389828" />
+    <state width="1750" height="372" key="GridCell.Tab.1.center" timestamp="1599422389827">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.1.left" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.1.center/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389827" />
+    <state width="1750" height="372" key="GridCell.Tab.1.left" timestamp="1599422389826">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
-    <state width="1323" height="215" key="GridCell.Tab.1.right" timestamp="1599417430084">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1750" height="372" key="GridCell.Tab.1.left/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389826" />
+    <state width="1750" height="372" key="GridCell.Tab.1.right" timestamp="1599422389827">
+      <screen x="0" y="0" width="1792" height="1120" />
     </state>
     <state width="1323" height="215" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1599417430084" />
+    <state width="1750" height="372" key="GridCell.Tab.1.right/0.0.1792.1120@0.0.1792.1120" timestamp="1599422389827" />
     <state x="213" y="19" key="Maven.ArtifactSearchDialog" timestamp="1595346785017">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -513,20 +507,20 @@
     <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1599384105385" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/freelancer_backend$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1599308042339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>freelancer.serviceimpl.UserServiceImpl</FILTER>
+    <SUITE FILE_PATH="coverage/freelancer_backend$JobServiceTest.ic" NAME="JobServiceTest Coverage Results" MODIFIED="1599307915888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>freelancer.serviceimpl.JobServiceImpl</FILTER>
     </SUITE>
     <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest.ic" NAME="AuctionServiceTest Coverage Results" MODIFIED="1599308028173" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
       <FILTER>freelancer.serviceimpl.AuctionServiceImpl</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/freelancer_backend$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1599307938507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>freelancer.serviceimpl.SkillServiceImpl</FILTER>
-    </SUITE>
     <SUITE FILE_PATH="coverage/freelancer_backend$AuctionServiceTest_getAuction__1_.ic" NAME="AuctionServiceTest.getAuction (1) Coverage Results" MODIFIED="1599223095587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>freelancer.service.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/freelancer_backend$JobServiceTest.ic" NAME="JobServiceTest Coverage Results" MODIFIED="1599307915888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
-      <FILTER>freelancer.serviceimpl.JobServiceImpl</FILTER>
+    <SUITE FILE_PATH="coverage/freelancer_backend$UserServiceTest.ic" NAME="UserServiceTest Coverage Results" MODIFIED="1599308042339" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>freelancer.serviceimpl.UserServiceImpl</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/freelancer_backend$SkillServiceTest.ic" NAME="SkillServiceTest Coverage Results" MODIFIED="1599307938507" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true">
+      <FILTER>freelancer.serviceimpl.SkillServiceImpl</FILTER>
     </SUITE>
   </component>
 </project>
