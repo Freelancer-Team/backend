@@ -17,7 +17,6 @@ public class Job {
     private int high;
     private int type;
     private String description;
-    private String remaining_time;
     private String title;
     private int state;
     private String publishTime;
@@ -185,14 +184,6 @@ public class Job {
 
     public String getPrice() {
         return price;
-    }
-
-    public void setRemaining_time(String remaining_time) {
-        this.remaining_time = remaining_time;
-    }
-
-    public String getRemaining_time() {
-        return remaining_time;
     }
 
     public void setSkills(List<String> skills) {
