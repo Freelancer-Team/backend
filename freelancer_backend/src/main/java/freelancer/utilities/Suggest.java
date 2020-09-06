@@ -45,28 +45,34 @@ public class Suggest {
     double blackRate = 2; //曾有过合作并当时评分低于blackRate的雇主将不被考虑
     int fullRate = 5;//评分的满分
 
-    List<Job> normalSuggest() {
+    List<Job> normalSuggest(int cnt) {
         List<Job> jobs = jobService.getCurrentJobs();
         List<Job> jobs1 = new ArrayList<>();
+        int tmp=cnt*groupNum;
+        int sum=jobs.size();
         for (int i = 0; i < 8; i++)
-            jobs1.add(jobs.get(i));
+            jobs1.add(jobs.get((i+tmp)%sum));
         return jobs1;
     }
 
-    List<Job> sadSuggest() {
+    List<Job> sadSuggest(int cnt) {
         List<Job> jobs = jobRepository.findAll();
         List<Job> jobs1 = new ArrayList<>();
+        int tmp=cnt*groupNum;
+        int sum=jobs.size();
         for (int i = 0; i < 8; i++)
-            jobs1.add(jobs.get(i));
+            jobs1.add(jobs.get((i+tmp)%sum));
         return jobs1;
     }
 
-    List<Job> addSuggest(List<Job> jobs) {
+    List<Job> addSuggest(List<Job> jobs,int cnt) {
         List<Job> addJobs = jobService.getCurrentJobs();
         List<Job> jobs1 = new ArrayList<>();
         jobs1.addAll(jobs);
+        int sum=addJobs.size();
+        int tmp=cnt*groupNum;
         for (int i = jobs.size(); i < 8; i++) {
-            jobs1.add(addJobs.get(i));
+            jobs1.add(addJobs.get((i+tmp)%sum));
         }
         return jobs1;
     }
@@ -74,22 +80,23 @@ public class Suggest {
     public List<Job> getSuggest(int userId, int cnt) {
         List<Job> jobs = jobService.getCurrentJobs();
         if (jobs.size() <= 0)
-            return sadSuggest();
+            return sadSuggest(cnt);
         //未登录或无相关资料的随机推荐job
-        if (userId == 0) return normalSuggest();
+        if (userId == 0) return normalSuggest(cnt);
+        if (cnt<0) return normalSuggest(-cnt);
         User user = userRepository.findById(userId).get();
         List<String> skills = user.getSkills();
         if (skills.size() <= 0)
-            return normalSuggest();
+            return normalSuggest(cnt);
         //筛出有技能的job
         jobs = filterBySkills(skills, jobs);
-        if (jobs.size() <= 8) return addSuggest(jobs);
+        if (jobs.size() <= 8) return addSuggest(jobs,cnt);
 
         List<Integer> peers = getPeers(skills, userId);//拥有相同技能的人
         List<Integer> blackList = getBlackList(userId);
 
         jobs = filterByBlack(jobs, blackList);
-        if (jobs.size() <= 8) return addSuggest(jobs);
+        if (jobs.size() <= 8) return addSuggest(jobs,cnt);
 
         int begin = cnt * groupNum;
         int end = (cnt + 1) * groupNum;
