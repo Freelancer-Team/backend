@@ -1,7 +1,6 @@
 package freelancer.controller;
 
 import freelancer.entity.Skill;
-import freelancer.security.PassToken;
 import freelancer.security.UserLoginToken;
 import freelancer.service.SkillService;
 import org.springframework.beans.factory.annotation.Autowired;

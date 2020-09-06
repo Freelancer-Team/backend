@@ -54,7 +54,7 @@ class JobServiceTest extends FreelancerApplicationTest {
 
     @Test
     void getSuggestJobs(){
-        assertEquals(8,jobService.getSuggestJobs().size());
+        assertEquals(8,jobService.getSuggestJobs(1,1).size());
     }
 
     @Test

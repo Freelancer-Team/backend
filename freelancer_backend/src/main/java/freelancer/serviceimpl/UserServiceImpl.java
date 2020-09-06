@@ -1,17 +1,12 @@
 package freelancer.serviceimpl;
 
-import freelancer.entity.Job;
 import freelancer.entity.User;
-import freelancer.repository.SkillRepository;
 import freelancer.repository.UserRepository;
-import freelancer.repository.JobRepository;
 import freelancer.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.JWT;
-
-import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
