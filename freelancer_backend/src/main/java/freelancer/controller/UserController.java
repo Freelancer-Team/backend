@@ -62,7 +62,7 @@ public class UserController {
 
     //注册
     @PassToken
-    @RequestMapping("/signup")
+    @PostMapping("/signup")
     public User signup(@RequestParam("name") String name,@RequestParam("password") String password,
                        @RequestParam("email") String email,@RequestParam("address") String address,
                        @RequestParam("phone") String phone){
@@ -71,28 +71,28 @@ public class UserController {
 
     //通过id获得用户技能
     @UserLoginToken
-    @RequestMapping("/getUserSkills")
+    @GetMapping("/getUserSkills")
     public List<String> getUserSkills(@RequestParam("id") Integer id){return userService.getUserSkills(id);}
 
 
     //通过id获得user
     @UserLoginToken
-    @RequestMapping("/getUser")
+    @GetMapping("/getUser")
     public User getUser(@RequestParam("id") int id){return userService.getUser(id);}
 
     //保存user信息
     @UserLoginToken
-    @RequestMapping("/saveUser")
+    @PostMapping("/saveUser")
     public User saveUser(@RequestBody User user){return userService.saveUser(user);}
 
     @UserLoginToken
-    @RequestMapping("/updateSkills")
+    @PostMapping("/updateSkills")
     public User updateSkills(@RequestBody List<String> skills,@RequestParam("userId") int userId){
         return userService.updateSkills(skills,userId);
     }
 
     @ManagerLoginToken
-    @RequestMapping("setUserRole")
+    @GetMapping("setUserRole")
     public void setUserRole(@RequestParam("userId") int userId,@RequestParam("role") int role){
         userService.setUserRole(userId,role);
     }
