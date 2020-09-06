@@ -66,6 +66,7 @@ public class AuctionServiceImpl implements AuctionService {
         {
             auction = filter.get(i);
             job = jobRepository.findById(filter.get(i).getProjectId()).get();
+            tmp.add(auction.getProjectId());
             tmp.add(auction.getProjectName());
             tmp.add(Integer.toString(job.getState()));
             if(job.getEmployeeId()==0)
