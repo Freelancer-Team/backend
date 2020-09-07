@@ -7,7 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.JWT;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -100,6 +103,10 @@ public class UserServiceImpl implements UserService {
     public User signup(String name,String password,String email,String address,String phone){
         User user = new User();
         List<User> list;
+        List<String> skills = new ArrayList<>();
+        Date d = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy/MM/dd");
+        String time = sdf.format(d);
         list = userRepository.findAll();
         int maxIndex = list.size()-1;
         int max = 1 + list.get(maxIndex).getId();
@@ -110,6 +117,15 @@ public class UserServiceImpl implements UserService {
         user.setEmail(email);
         user.setAddress(address);
         user.setPhone(phone);
+        user.setEmployeeRate(0);
+        user.setEmployerRate(0);
+        user.setIsShow(1);
+        user.setAge(20);
+        user.setGender("M");
+        user.setDescription("Don't have a description");
+        user.setSkills(skills);
+        user.setIcon("http://freelancer-images.oss-cn-beijing.aliyuncs.com/hello.jpg");
+        user.setTime(time);
         return userRepository.save(user);
     }
 

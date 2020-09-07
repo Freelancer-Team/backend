@@ -39,6 +39,19 @@ public class AuctionServiceImpl implements AuctionService {
         auction.setPrice(price);
         auction.setSkills(user.getSkills());
         auction.setType(job.getType());
+        if(job.getCandidateNum() == 0)
+        {
+            job.setCandidateNum(1);
+            job.setLowestPrice(price);
+            job.setAvgPrice(price);
+        }
+        else{
+            if(job.getLowestPrice()>price)
+                job.setLowestPrice(price);
+            job.setAvgPrice((job.getAvgPrice()*job.getCandidateNum()+price)/(job.getCandidateNum()+1));
+            job.setCandidateNum(job.getCandidateNum()+1);
+        }
+        jobRepository.save(job);
         return auctionRepository.save(auction);
     }
 
@@ -66,6 +79,7 @@ public class AuctionServiceImpl implements AuctionService {
         {
             auction = filter.get(i);
             job = jobRepository.findById(filter.get(i).getProjectId()).get();
+            if(job.getState() == 1 || job.getState() == 2) continue;
             tmp.add(auction.getProjectId());
             tmp.add(auction.getProjectName());
             tmp.add(Integer.toString(job.getState()));

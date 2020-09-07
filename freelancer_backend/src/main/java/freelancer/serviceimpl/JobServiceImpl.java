@@ -113,7 +113,6 @@ public class JobServiceImpl implements JobService {
 
 
     @Override
-    @Cacheable(value ="sampleCache")
     public List<Job> getCurrentJobs(){
         List<Job> jobs = jobRepository.findAll();
         Job job;
@@ -161,7 +160,10 @@ public class JobServiceImpl implements JobService {
 
     @Override
     public Job saveJob(Job job){
-        job.setState(-3);
+        if(job.getState() == 2) {
+            SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            job.setFinishTime(df.format(new Date()));
+        }
         return jobRepository.save(job);
     }
 
